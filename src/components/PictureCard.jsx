@@ -13,6 +13,7 @@ export default function PictureCard(props) {
   const { pathname } = useLocation();
   const [isLoading, setLoading] = useState(true);
   const handleImageLoad = useCallback(() => setLoading(false), [setLoading]);
+
   const commonStyle = {
     height: {
       xs: "auto",
@@ -42,7 +43,7 @@ export default function PictureCard(props) {
     >
       {isLoading && (
         <Skeleton
-          sx={{ ...commonStyle, height: "338px" }}
+          sx={{ ...commonStyle, height: "338px", bgcolor: "#241d25" }}
           variant="rectangular"
           animation="wave"
         />
@@ -51,6 +52,7 @@ export default function PictureCard(props) {
         sx={imageStyle}
         component="img"
         onLoad={handleImageLoad}
+        onError={handleImageLoad}
         src={pic.src}
         alt={pic.name}
       />
@@ -61,8 +63,14 @@ export default function PictureCard(props) {
         <Typography component="p">{pic.description}</Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" component={Link} to={`${pathname}/${pic.id}`}>
-          Details
+        <Button
+          size="small"
+          component={Link}
+          to={`${pathname}/${pic.id}`}
+          state={{ prevPath: pathname }}
+          preventScrollReset
+        >
+          Чытаць падрабязней
         </Button>
       </CardActions>
     </Card>

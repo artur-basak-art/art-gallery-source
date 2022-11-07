@@ -1,5 +1,4 @@
 import React from "react";
-import { Outlet, useLoaderData } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -9,9 +8,7 @@ import PictureCard from "./PictureCard";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function AlbumPage() {
-  const { data } = useLoaderData();
-
+export default function Album({ categories, title, description }) {
   return (
     <>
       <Header />
@@ -48,7 +45,7 @@ export default function AlbumPage() {
               }}
               gutterBottom
             >
-              Lorem ipsum text
+              {title}
             </Typography>
             <Typography
               variant="h7"
@@ -56,41 +53,58 @@ export default function AlbumPage() {
               color="text.secondary"
               paragraph
             >
-              Lorem ipsum text lorem ipsum text lorem ipsum text lorem ipsum
-              text lorem ipsum text lorem ipsum text lorem ipsum text lorem
-              ipsum text lorem ipsum text lorem ipsum text lorem ipsum text
-              lorem ipsum text lorem ipsum text
+              {description}
             </Typography>
           </Container>
         </Box>
         <Container
           sx={{
             py: {
-              sm: 8,
+              sm: 4,
               xs: "8px",
             },
           }}
           maxWidth="md"
         >
-          <Grid container spacing={3}>
-            {data.map((card) => (
-              <Grid item key={card.name} xs={12} sm={6} md={4}>
-                <PictureCard
-                  pic={{
-                    id: card.src,
-                    src: "https://picsum.photos/2000/3000",
-                    name: "Name",
-                    description:
-                      "Lorem ipsum description lorem ipsum description lorem ipsum",
-                  }}
-                />
+          {categories.map((category) => (
+            <>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "18px",
+                    sm: "28px",
+                  },
+                  paddingTop: {
+                    sm: 4,
+                    xs: "8px",
+                  },
+                }}
+                variant="h5"
+                align="left"
+                color="text.secondary"
+                component="h2"
+              >
+                {category.name.toUpperCase()}
+              </Typography>
+              <Grid container spacing={3}>
+                {category.items.map((card) => (
+                  <Grid item key={card.title} xs={12} sm={6} md={4}>
+                    <PictureCard
+                      pic={{
+                        id: card.src,
+                        src: `assets/${category.path}/${card.src}-1.png`,
+                        name: card.name,
+                        description: `${card.description.substring(0, 50)}...`,
+                      }}
+                    />
+                  </Grid>
+                ))}
               </Grid>
-            ))}
-          </Grid>
+            </>
+          ))}
         </Container>
       </main>
       <Footer />
-      <Outlet />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { ScrollRestoration } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ButtonGroup from "@mui/material/ButtonGroup";
@@ -10,12 +11,11 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import EmailIcon from "@mui/icons-material/Email";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
-import RefreshScroll from "./RefreshScroll";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
-      All images copyright © Name. All rights reserved.
+      All images copyright © Artur Basak (@belarusian_monsters). All rights reserved.
     </Typography>
   );
 }
@@ -96,7 +96,7 @@ export default function Footer() {
         </Tooltip>
       </ButtonGroup>
       <Copyright />
-      <RefreshScroll />
+      <ScrollRestoration />
     </Box>
   );
 }

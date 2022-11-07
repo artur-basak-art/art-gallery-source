@@ -15,7 +15,6 @@ import NewspaperIcon from "@mui/icons-material/Newspaper";
 import Button from "@mui/material/Button";
 import Header from "./Header";
 import Footer from "./Footer";
-import RefreshScroll from "./RefreshScroll";
 
 export default function NewsPage() {
   const { data } = useLoaderData();
@@ -64,10 +63,10 @@ export default function NewsPage() {
                 },
               }}
             >
-              Lorem ipsum text
+              Згадкі мастака ў СМІ
             </Typography>
             <Button size="small" component={LinkRouter} to="/">
-              Back
+              НАЗАД
             </Button>
             <List
               sx={{ width: "100%", maxWidth: 500, bgcolor: "background.paper" }}
@@ -89,7 +88,6 @@ export default function NewsPage() {
         </Box>
       </main>
       <Footer />
-      <RefreshScroll />
     </div>
   );
 }

@@ -20,11 +20,11 @@ import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 
 const navItems = [
   {
-    name: "Category 1",
+    name: "НЯЧЫСЦІКІ",
     to: "/monsters",
   },
   {
-    name: "Category 2",
+    name: "БАГІ",
     to: "/gods",
   },
 ];
@@ -90,7 +90,7 @@ export default function Header() {
                 component="div"
                 sx={{ margin: "0 16px", lineHeight: 1 }}
               >
-                JOHN DOE
+                ARTUR BASAK
               </Typography>
               <Typography component="div" sx={{ fontSize: "10px" }}>
                 Gallery
@@ -138,7 +138,7 @@ export default function Header() {
           }}
         >
           <Button component={Link} to="/">
-            Main
+            ГАЛОЎНАЯ
           </Button>
           {navItems.map((item) => (
             <React.Fragment key={item.name}>

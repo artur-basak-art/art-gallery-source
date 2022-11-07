@@ -67,7 +67,7 @@ export default function MainPage() {
                 },
               }}
             >
-              Lorem ipsum text
+              Вітаю, Спадарства!
             </Typography>
             <Typography
               variant="h7"
@@ -132,7 +132,7 @@ export default function MainPage() {
                   color="text.secondary"
                   paragraph
                 >
-                  JOHN DOE
+                  АРТУР БАСАК
                 </Typography>
                 <Typography
                   variant="body2"
@@ -144,13 +144,10 @@ export default function MainPage() {
                   color="text.secondary"
                   paragraph
                 >
-                  Lorem ipsum text lorem ipsum text lorem ipsum text lorem ipsum
-                  text lorem ipsum text lorem ipsum text lorem ipsum text lorem
-                  ipsum text lorem ipsum text lorem ipsum text lorem ipsum text
-                  lorem ipsum text lorem ipsum text
+                    Артур Басак, мастак-самавук, праграміст і UI інжынер, натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў і міфаў. Яго малюнкi можна пабачыць у Instagram акаунце @belarusian_monsters.
                 </Typography>
                 <Button size="small" component={Link} to="/news">
-                  News about author
+                  СМІ аб аўтары
                 </Button>
               </Box>
               {isAuthorPhotoLoading && (
@@ -164,9 +161,9 @@ export default function MainPage() {
               )}
               <Box
                 component="img"
-                src="https://picsum.photos/250/300"
+                src="/assets/profile.png"
                 width={250}
-                height={300}
+                height={280}
                 alt=""
                 onLoad={handleAuthorPhotoLoad}
                 sx={{

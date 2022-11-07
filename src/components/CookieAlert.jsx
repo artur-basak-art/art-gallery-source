@@ -14,7 +14,7 @@ export default function CookieAlert() {
     return (
         <Snackbar open={isOpen} onClose={handleClose}>
             <Alert onClose={handleClose} severity="info" sx={{ width: '100%' }}>
-                This is a information message!
+                Палітыка апрацоўкі файлаў Cookie. Гэты вэб-сайт выкарыстоўвае файлы Cookie для забеспячэння зручнасці карыстальнікаў сайта, яго паляпшэння, а таксама аналітыкі.
             </Alert>
         </Snackbar>
     );

@@ -1,5 +1,7 @@
+// noinspection RequiredAttributes
+
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -19,6 +21,24 @@ import PrintIcon from "@mui/icons-material/Print";
 import CloseIcon from "@mui/icons-material/Close";
 
 import { copyTextToClipboard } from "../services/copy";
+
+import loadGods from "../data/gods";
+import loadMonsters from "../data/monsters";
+
+const {
+  data: { categories: godsCategories },
+} = loadGods();
+const {
+  data: { categories: monstersCategories },
+} = loadMonsters();
+const characters = [...godsCategories, ...monstersCategories]
+  .map((category) =>
+    category.items.map((item) => ({
+      ...item,
+      url: `/assets/${category.path}/${item.src}-1.png`,
+    }))
+  )
+  .flat();
 
 function ImagePrint(source) {
   return `
@@ -44,6 +64,8 @@ function ImagePrint(source) {
 export default function Details(props) {
   const { onClose } = props;
   const navigateTo = useNavigate();
+  const { characterId } = useParams();
+  const character = characters.find((c) => c.src === characterId);
   const [isLoading, setLoading] = useState(true);
 
   const handleClose = () => {
@@ -51,21 +73,28 @@ export default function Details(props) {
     return onClose && onClose();
   };
 
+  const handleDownload = () => {
+    window?.dataLayer?.push({ event: "download" });
+  };
+
   const handlePrint = () => {
+    window?.dataLayer?.push({ event: "print" });
     const url = "about:blank";
     const pwa = window.open(url, "_new");
     pwa.document.open();
-    pwa.document.write(ImagePrint("https://picsum.photos/1200/3000"));
+    pwa.document.write(ImagePrint(character.url));
     pwa.document.close();
   };
 
-  const handleCopy = () =>
-    copyTextToClipboard("https://picsum.photos/1200/3000");
+  const handleCopy = () => {
+    window?.dataLayer?.push({ event: "copy" });
+    copyTextToClipboard(document.URL);
+  };
 
   return (
-    <Dialog onClose={handleClose} open='true'>
+    <Dialog onClose={handleClose} open>
       <DialogTitle sx={{ textAlign: "center" }}>
-        Lorem ipsum text
+        {character.name}
         <IconButton
           aria-label="close"
           onClick={handleClose}
@@ -79,7 +108,7 @@ export default function Details(props) {
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent>
+      <DialogContent sx={{ padding: { sm: "20px 24px", xs: "16px 4px" } }}>
         <Card
           sx={{
             display: "flex",
@@ -92,33 +121,31 @@ export default function Details(props) {
           {isLoading && (
             <Skeleton
               variant="rectangular"
-              width={270}
-              height={338}
+              width={350}
+              height={436}
               animation="wave"
             />
           )}
           <CardMedia
             sx={{
-              minHeight: "336px",
-              height: "338px",
-              width: "270px",
-              maxWidth: "270px",
+              minHeight: "436px",
+              height: "436px",
+              width: "350px",
+              maxWidth: "350px",
               display: isLoading ? "none" : "inherit",
             }}
             component="img"
-            src="https://picsum.photos/1200/3000"
+            src={character.url}
             onLoad={() => setLoading(false)}
             alt="random"
           />
           <CardContent sx={{ flexGrow: 1, paddingBottom: 0 }}>
-            <Typography component="p">
-              Lorem ipsum description lorem ipsum description lorem ipsum ipsum
-              description lorem ipsum description lorem ipsum ipsum description
-              lorem ipsum description lorem ipsum ipsum description lorem ipsum
-              description lorem ipsum ipsum description lorem ipsum description
-              lorem ipsum ipsum description lorem ipsum description lorem ipsum
-            </Typography>
-            <Typography component="small" variant='body2' sx={{ display: 'inline-block', marginTop: '16px' }}>
+            <Typography component="p">{character.description}</Typography>
+            <Typography
+              component="small"
+              variant="body2"
+              sx={{ display: "inline-block", marginTop: "16px" }}
+            >
               Lorem ipsum description lorem ipsum description lorem ipsum
             </Typography>
           </CardContent>
@@ -131,16 +158,20 @@ export default function Details(props) {
           </IconButton>
         </Tooltip>
         <Tooltip title="Print">
-          <IconButton sx={{ display: { xs: 'none', sm: 'inherit' } }} variant="outlined" onClick={handlePrint}>
+          <IconButton
+            sx={{ display: { xs: "none", sm: "inherit" } }}
+            variant="outlined"
+            onClick={handlePrint}
+          >
             <PrintIcon />
           </IconButton>
         </Tooltip>
-        <Tooltip title="Download">
+        <Tooltip title="Download" onClose={handleDownload}>
           <IconButton
             sx={{ marginLeft: "8px" }}
             variant="outlined"
             component="a"
-            href="https://picsum.photos/1200/3000"
+            href={character.url}
             target="_blank"
             download
           >

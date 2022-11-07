@@ -7,7 +7,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { blueGrey, grey } from "@mui/material/colors";
 
 import MainPage from "./components/MainPage";
-import AlbumPage from "./components/AlbumPage";
+import MonstersPage from "./components/MonstersPage";
+import GodsPage from "./components/GodsPage";
 import ErrorPage from "./components/ErrorPage";
 import NewsPage from "./components/NewsPage";
 import Details from "./components/Details";
@@ -29,24 +30,24 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/monsters",
-    element: <AlbumPage />,
-    loader: loadMonsters,
+    path: "/gods",
+    element: <GodsPage />,
+    loader: loadGods,
     children: [
       {
-        path: "/monsters/:characterId",
+        path: "/gods/:characterId",
         element: <Details />,
       },
     ],
     errorElement: <ErrorPage />,
   },
   {
-    path: "/gods",
-    element: <AlbumPage />,
-    loader: loadGods,
+    path: "/monsters",
+    element: <MonstersPage />,
+    loader: loadMonsters,
     children: [
       {
-        path: "/gods/:characterId",
+        path: "/monsters/:characterId",
         element: <Details />,
       },
     ],
