@@ -97,7 +97,7 @@ export default function Album({ categories, title, description }) {
                     <PictureCard
                       pic={{
                         id: card.src,
-                        src: `assets/${category.path}/${card.src}-1.png`,
+                        src: `assets/${category.path}/${card.src}-1-1.png`,
                         name: card.name,
                         description: `${card.description.substring(0, 50)}...`,
                       }}

@@ -17,8 +17,8 @@ export default function ErrorPage() {
           flexDirection: "column",
         }}
       >
-        <h1>Oops!</h1>
-        <p>Sorry, an unexpected error has occurred.</p>
+        <h1>Ой, нешта пайшло не так!</h1>
+        <p>Выбачайце, здарылася нейкая памылка.</p>
         <p>
           <i>{error.statusText || error.message}</i>
         </p>

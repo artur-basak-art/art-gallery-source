@@ -62,6 +62,7 @@ export default function PictureCard(props) {
       <CardMedia
         sx={imageStyle}
         component="img"
+        decoding="async"
         onLoad={handleImageLoad}
         onError={handleImageLoad}
         src={pic.src}

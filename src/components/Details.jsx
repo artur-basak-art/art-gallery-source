@@ -36,6 +36,7 @@ const characters = [...godsCategories, ...monstersCategories]
     category.items.map((item) => ({
       ...item,
       url: `/assets/${category.path}/${item.src}-1.png`,
+      urlSet: `/assets/${category.path}/${item.src}-1-1.png, /assets/${category.path}/${item.src}-1.png 2x`,
     }))
   )
   .flat();
@@ -136,6 +137,7 @@ export default function Details(props) {
             }}
             component="img"
             src={character.url}
+            srcSet={character.urlSet}
             onLoad={() => setLoading(false)}
             alt="random"
           />
