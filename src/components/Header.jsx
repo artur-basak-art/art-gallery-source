@@ -20,6 +20,10 @@ import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 
 const navItems = [
   {
+    name: "ГАЛОЎНАЯ",
+    to: "/",
+  },
+  {
     name: "НЯЧЫСЦІКІ",
     to: "/monsters",
   },
@@ -36,7 +40,7 @@ function SocialMedia({ color }) {
         <IconButton
           variant="outlined"
           component="a"
-          href="https://instagram.com"
+          href="https://www.instagram.com/belarusian_monsters"
           target="_blank"
         >
           <InstagramIcon htmlColor={color} />
@@ -46,7 +50,7 @@ function SocialMedia({ color }) {
         <IconButton
           variant="outlined"
           component="a"
-          href="https://instagram.com"
+          href="https://www.patreon.com/belarusian_monsters"
           target="_blank"
         >
           <VolunteerActivismIcon htmlColor={color} />
@@ -137,9 +141,6 @@ export default function Header() {
             padding: "40px 32px",
           }}
         >
-          <Button component={Link} to="/">
-            ГАЛОЎНАЯ
-          </Button>
           {navItems.map((item) => (
             <React.Fragment key={item.name}>
               <Divider variant="middle" flexItem sx={{ margin: "16px 0" }} />

@@ -7,6 +7,7 @@ import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 
 import Button from "@mui/material/Button";
+import MUILink from "@mui/material/Link";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -75,10 +76,23 @@ export default function MainPage() {
               color="text.secondary"
               paragraph
             >
-              Lorem ipsum text lorem ipsum text lorem ipsum text lorem ipsum
-              text lorem ipsum text lorem ipsum text lorem ipsum text lorem
-              ipsum text lorem ipsum text lorem ipsum text lorem ipsum text
-              lorem ipsum text lorem ipsum text
+              Цудоўныя навіны! У выдавецтве &laquo;Тэхналогія&raquo; у мяне
+              выйшаў{" "}
+              <MUILink
+                href="https://www.livelib.ru/book/1007675719-belaruskiya-nyachystsiki-lyasnyya-artur-basak"
+                target="_blank"
+              >
+                мой першы артбук
+              </MUILink>{" "}
+              з ілюстрацыямі &laquo;нячысцікаў&raquo; і неверагоднымі тэкстамі
+              да іх нашай беларускай пісьменніцы{" "}
+              <MUILink
+                href="https://www.livelib.ru/author/1093131-alina-dlatoskaya"
+                target="_blank"
+              >
+                Аліны Длатоўскай
+              </MUILink>
+              .
             </Typography>
             {isBookPhotoLoading && (
               <Skeleton
@@ -87,18 +101,18 @@ export default function MainPage() {
                   width: { xs: "calc(100vw - 32px)", sm: "550px" },
                 }}
                 variant="rectangular"
-                height={300}
+                height={550}
                 animation="wave"
               />
             )}
             <Box
               component="img"
-              src="https://picsum.photos/550/300"
+              src="/assets/cover2.jpeg"
               alt=""
               onLoad={handleBookPhotoLoad}
               sx={{
                 width: { xs: "calc(100vw - 32px)", sm: "550px" },
-                height: { xs: "auto", sm: "300px" },
+                height: { xs: "auto", sm: "550px" },
                 margin: "16px 0 32px",
                 display: isBookPhotoLoading ? "none" : "inherit",
               }}
@@ -109,10 +123,35 @@ export default function MainPage() {
               color="text.secondary"
               paragraph
             >
-              Lorem ipsum text lorem ipsum text lorem ipsum text lorem ipsum
-              text lorem ipsum text lorem ipsum text lorem ipsum text lorem
-              ipsum text lorem ipsum text lorem ipsum text lorem ipsum text
-              lorem ipsum text lorem ipsum text
+              Знайсці кнігу можна у{" "}
+              <MUILink
+                href="https://tn.by/product/bielaruskija-niacysciki-liasnyja/"
+                target="_blank"
+              >
+                краме выдавецтва &laquo;Тэхналогія&raquo;
+              </MUILink>
+              , у крамах{" "}
+              <MUILink
+                href="https://akademkniga-books.by/catalog/osnovnoy_razdel_tovarov/belaruskiya_nyachystsiki_lyasnyya/"
+                target="_blank"
+              >
+                &laquo;Акадэмкніга&raquo;
+              </MUILink>
+              , &laquo;Белкніга&raquo;, &laquo;Светоч&raquo;,{" "}
+              <MUILink
+                href="https://kniganosha.by/catalog/belaruskiya_nyachysciki_lyasnyya"
+                target="_blank"
+              >
+                &laquo;Кніганоша&raquo;
+              </MUILink>{" "}
+              у Менску, а таксама ў краме{" "}
+              <MUILink
+                href="https://cudounia.by/item/belaruskiya-nyacysciki"
+                target="_blank"
+              >
+                &laquo;Цудоўня&raquo;
+              </MUILink>{" "}
+              у Гродна.
             </Typography>
             <Divider sx={{ width: "100%", margin: "32px 0" }} />
             <Box
@@ -144,7 +183,22 @@ export default function MainPage() {
                   color="text.secondary"
                   paragraph
                 >
-                    Артур Басак, мастак-самавук, праграміст і UI інжынер, натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў і міфаў. Яго малюнкi можна пабачыць у Instagram акаунце @belarusian_monsters.
+                  Артур Басак, мастак-самавук, праграміст і UI інжынер, які
+                  натхняецца беларускiм фальклорам ды народнай дэманалогіяй i
+                  стварае вобразы вядомых нячысцікаў з паданняў, міфаў,
+                  беларускіх легенд і казак. Працуе ў лічбавым фармаце.
+                  <br />
+                  <br />
+                  Яго малюнкі жыўцом можна пабачыць у &laquo;Музеі Міфаў&raquo;
+                  Бярэзінскага Запаведніка, Лідскім Замку, а таксама онлайн у
+                  Instagram акаунце{" "}
+                  <MUILink
+                    href="https://www.instagram.com/belarusian_monsters"
+                    target="_blank"
+                  >
+                    @belarusian_monsters
+                  </MUILink>{" "}
+                  і канешне ж тут на гэтым сайце.
                 </Typography>
                 <Button size="small" component={Link} to="/news">
                   СМІ аб аўтары

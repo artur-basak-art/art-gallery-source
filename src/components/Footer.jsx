@@ -38,7 +38,7 @@ export default function Footer() {
           <IconButton
             variant="outlined"
             component="a"
-            href="https://instagram.com"
+            href="https://www.instagram.com/belarusian_monsters"
             target="_blank"
           >
             <InstagramIcon />
@@ -48,7 +48,7 @@ export default function Footer() {
           <IconButton
             variant="outlined"
             component="a"
-            href="https://instagram.com"
+            href="https://t.me/belarusian_monsters"
             target="_blank"
           >
             <TelegramIcon />
@@ -58,7 +58,7 @@ export default function Footer() {
           <IconButton
             variant="outlined"
             component="a"
-            href="https://instagram.com"
+            href="https://www.facebook.com/artur.basak"
             target="_blank"
           >
             <FacebookIcon />
@@ -68,7 +68,7 @@ export default function Footer() {
           <IconButton
             variant="outlined"
             component="a"
-            href="https://instagram.com"
+            href="https://www.pinterest.com/arturbasak/belarusian-monsters-%D0%B1%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D0%BAi%D1%8F-%D0%BD%D1%8F%D1%87%D1%8B%D1%81%D1%86i%D0%BAi/"
             target="_blank"
           >
             <PinterestIcon />
@@ -88,7 +88,7 @@ export default function Footer() {
           <IconButton
             variant="outlined"
             component="a"
-            href="https://instagram.com"
+            href="https://www.patreon.com/belarusian_monsters"
             target="_blank"
           >
             <VolunteerActivismIcon />

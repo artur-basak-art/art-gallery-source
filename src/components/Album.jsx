@@ -7,6 +7,7 @@ import Container from "@mui/material/Container";
 import PictureCard from "./PictureCard";
 import Header from "./Header";
 import Footer from "./Footer";
+import ForestStar from "./icons/ForestStar";
 
 export default function Album({ categories, title, description }) {
   return (
@@ -21,7 +22,7 @@ export default function Album({ categories, title, description }) {
               xs: "32px",
             },
             pb: {
-              sm: 6,
+              sm: 2,
               xs: "8px",
             },
           }}
@@ -53,9 +54,13 @@ export default function Album({ categories, title, description }) {
               color="text.secondary"
               paragraph
             >
-              {description}
+              {/* eslint-disable-next-line react/no-danger */}
+              <span dangerouslySetInnerHTML={{ __html: description }} />
             </Typography>
           </Container>
+        </Box>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <ForestStar />
         </Box>
         <Container
           sx={{

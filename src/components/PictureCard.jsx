@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -11,8 +11,17 @@ import Button from "@mui/material/Button";
 export default function PictureCard(props) {
   const { pic } = props;
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [isLoading, setLoading] = useState(true);
   const handleImageLoad = useCallback(() => setLoading(false), [setLoading]);
+  const handleCardClick = useCallback(
+    () =>
+      navigate(`${pathname}/${pic.id}`, {
+        state: { prevPath: pathname },
+        preventScrollReset: true,
+      }),
+    [navigate, pathname, pic]
+  );
 
   const commonStyle = {
     height: {
@@ -31,6 +40,7 @@ export default function PictureCard(props) {
 
   return (
     <Card
+      onClick={handleCardClick}
       sx={{
         height: {
           xs: "inherit",
@@ -39,6 +49,7 @@ export default function PictureCard(props) {
         display: "flex",
         flexDirection: "column",
         boxShadow: "none",
+        cursor: "pointer",
       }}
     >
       {isLoading && (
@@ -63,15 +74,7 @@ export default function PictureCard(props) {
         <Typography component="p">{pic.description}</Typography>
       </CardContent>
       <CardActions>
-        <Button
-          size="small"
-          component={Link}
-          to={`${pathname}/${pic.id}`}
-          state={{ prevPath: pathname }}
-          preventScrollReset
-        >
-          Чытаць падрабязней
-        </Button>
+        <Button size="small">Чытаць падрабязней</Button>
       </CardActions>
     </Card>
   );

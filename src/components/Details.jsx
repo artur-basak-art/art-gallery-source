@@ -140,13 +140,17 @@ export default function Details(props) {
             alt="random"
           />
           <CardContent sx={{ flexGrow: 1, paddingBottom: 0 }}>
-            <Typography component="p">{character.description}</Typography>
+            <Typography component="p">
+              <div
+                dangerouslySetInnerHTML={{ __html: character.description }}
+              />
+            </Typography>
             <Typography
               component="small"
               variant="body2"
               sx={{ display: "inline-block", marginTop: "16px" }}
             >
-              Lorem ipsum description lorem ipsum description lorem ipsum
+              {`Літаратура і крыніцы: ${character.source || "--"}`}
             </Typography>
           </CardContent>
         </Card>
