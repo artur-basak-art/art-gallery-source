@@ -1,9 +1,8 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import Skeleton from "@mui/material/Skeleton";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
@@ -12,8 +11,6 @@ export default function PictureCard(props) {
   const { pic } = props;
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const [isLoading, setLoading] = useState(true);
-  const handleImageLoad = useCallback(() => setLoading(false), [setLoading]);
   const handleCardClick = useCallback(
     () =>
       navigate(`${pathname}/${pic.id}`, {
@@ -23,19 +20,15 @@ export default function PictureCard(props) {
     [navigate, pathname, pic]
   );
 
-  const commonStyle = {
+  const imageStyle = {
     height: {
       xs: "auto",
       sm: "338px",
     },
     width: {
-      xs: "100vw",
+      xs: "70%",
       sm: "270px",
     },
-  };
-  const imageStyle = {
-    ...commonStyle,
-    display: isLoading ? "none" : "inherit",
   };
 
   return (
@@ -48,27 +41,32 @@ export default function PictureCard(props) {
         },
         display: "flex",
         flexDirection: "column",
+        alignItems: {
+          xs: "center",
+          sm: "flex-start",
+        },
         boxShadow: "none",
         cursor: "pointer",
       }}
     >
-      {isLoading && (
-        <Skeleton
-          sx={{ ...commonStyle, height: "338px", bgcolor: "#241d25" }}
-          variant="rectangular"
-          animation="wave"
-        />
-      )}
       <CardMedia
         sx={imageStyle}
         component="img"
         decoding="async"
-        onLoad={handleImageLoad}
-        onError={handleImageLoad}
+        loading="lazy"
         src={pic.src}
         alt={pic.name}
       />
-      <CardContent sx={{ flexGrow: 1, paddingBottom: 0 }}>
+      <CardContent
+        sx={{
+          flexGrow: 1,
+          paddingBottom: 0,
+          textAlign: {
+            xs: "center",
+            sm: "left",
+          },
+        }}
+      >
         <Typography gutterBottom variant="h6" component="h2">
           {pic.name}
         </Typography>

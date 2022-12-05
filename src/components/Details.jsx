@@ -36,6 +36,7 @@ const characters = [...godsCategories, ...monstersCategories]
     category.items.map((item) => ({
       ...item,
       url: `/assets/${category.path}/${item.src}-1.png`,
+      urlLow: `/assets/${category.path}/${item.src}-1-1.png`,
       urlSet: `/assets/${category.path}/${item.src}-1-1.png, /assets/${category.path}/${item.src}-1.png 2x`,
     }))
   )
@@ -136,7 +137,8 @@ export default function Details(props) {
               display: isLoading ? "none" : "inherit",
             }}
             component="img"
-            src={character.url}
+            decoding="async"
+            src={character.urlLow}
             srcSet={character.urlSet}
             onLoad={() => setLoading(false)}
             alt="random"
@@ -152,7 +154,10 @@ export default function Details(props) {
               variant="body2"
               sx={{ display: "inline-block", marginTop: "16px" }}
             >
-              {`Літаратура і крыніцы: ${character.source || "--"}`}
+              {`Літаратура і крыніцы: ${
+                character.source ||
+                "Міфалогія беларусаў: Энцыклапедычны слоўнік, Т.Валодзіна, С.Санько, 2011"
+              }`}
             </Typography>
           </CardContent>
         </Card>

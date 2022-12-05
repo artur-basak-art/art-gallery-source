@@ -59,7 +59,13 @@ export default function Album({ categories, title, description }) {
             </Typography>
           </Container>
         </Box>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <ForestStar />
         </Box>
         <Container
@@ -81,7 +87,11 @@ export default function Album({ categories, title, description }) {
                   },
                   paddingTop: {
                     sm: 4,
-                    xs: "8px",
+                    xs: "24px",
+                  },
+                  textAlign: {
+                    xs: "center",
+                    sm: "left",
                   },
                 }}
                 variant="h5"

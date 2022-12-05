@@ -12,8 +12,8 @@ import Drawer from "@mui/material/Drawer";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Tooltip from "@mui/material/Tooltip";
 
-import BrushIcon from "@mui/icons-material/Brush";
-import ColorLensIcon from "@mui/icons-material/ColorLens";
+// import BrushIcon from "@mui/icons-material/Brush";
+// import ColorLensIcon from "@mui/icons-material/ColorLens";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
@@ -79,7 +79,7 @@ export default function Header() {
           sx={{ display: "flex", alignItems: "center", marginRight: "16px" }}
         >
           <Button component={Link} to="/" sx={{ color: "#fff" }}>
-            <BrushIcon />
+            {/* <BrushIcon /> */}
             <Box
               component="div"
               sx={{
@@ -100,7 +100,7 @@ export default function Header() {
                 Gallery
               </Typography>
             </Box>
-            <ColorLensIcon />
+            {/* <ColorLensIcon /> */}
           </Button>
           <Box component="nav" sx={{ display: { xs: "none", sm: "flex" } }}>
             {navItems.map((item) => (

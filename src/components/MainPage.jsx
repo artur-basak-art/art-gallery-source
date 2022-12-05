@@ -76,7 +76,7 @@ export default function MainPage() {
               color="text.secondary"
               paragraph
             >
-              Цудоўныя навіны! У выдавецтве &laquo;Тэхналогія&raquo; у мяне
+              У мяне цудоўныя навіны! У выдавецтве &laquo;Тэхналогія&raquo;
               выйшаў{" "}
               <MUILink
                 href="https://www.livelib.ru/book/1007675719-belaruskiya-nyachystsiki-lyasnyya-artur-basak"
@@ -85,7 +85,7 @@ export default function MainPage() {
                 мой першы артбук
               </MUILink>{" "}
               з ілюстрацыямі &laquo;нячысцікаў&raquo; і неверагоднымі тэкстамі
-              да іх нашай беларускай пісьменніцы{" "}
+              да іх беларускай пісьменніцы{" "}
               <MUILink
                 href="https://www.livelib.ru/author/1093131-alina-dlatoskaya"
                 target="_blank"
@@ -123,7 +123,7 @@ export default function MainPage() {
               color="text.secondary"
               paragraph
             >
-              Знайсці кнігу можна у{" "}
+              Знайсці і набыць кнігу або замовіць яе анлайн можна у{" "}
               <MUILink
                 href="https://tn.by/product/bielaruskija-niacysciki-liasnyja/"
                 target="_blank"
@@ -183,10 +183,10 @@ export default function MainPage() {
                   color="text.secondary"
                   paragraph
                 >
-                  Артур Басак, мастак-самавук, праграміст і UI інжынер, які
-                  натхняецца беларускiм фальклорам ды народнай дэманалогіяй i
-                  стварае вобразы вядомых нячысцікаў з паданняў, міфаў,
-                  беларускіх легенд і казак. Працуе ў лічбавым фармаце.
+                  Артур Басак, мастак-самавук, ілюстратар, праграміст і UI
+                  інжынер, які натхняецца беларускiм фальклорам ды народнай
+                  дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў,
+                  міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце.
                   <br />
                   <br />
                   Яго малюнкі жыўцом можна пабачыць у &laquo;Музеі Міфаў&raquo;
