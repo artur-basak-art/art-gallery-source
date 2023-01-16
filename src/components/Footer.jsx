@@ -58,7 +58,7 @@ export default function Footer() {
           <IconButton
             variant="outlined"
             component="a"
-            href="https://www.facebook.com/artur.basak"
+            href="https://www.facebook.com/basak.artur"
             target="_blank"
           >
             <FacebookIcon />

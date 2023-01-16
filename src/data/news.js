@@ -1,5 +1,10 @@
 const news = [
   {
+    name: `Из леса и болот. Программист из Гродно рисует героев белорусской мифологии`,
+    date: 'Студзень 5, 2023',
+    url: 'https://aif.by/timefree/uvlechenie/iz_lesa_i_bolot_programmist_iz_grodno_risuet_geroev_belorusskoy_mifologii',
+  },
+  {
     name: `Інтэрв'ю дзіцячаму часопісу "Бярозка" (№10 / 2022)`,
     date: 'Лістапад 1, 2022',
     url: 'http://www.dompressy.by/2022/10/21/anons-dzyacyataga-numara/',
