@@ -76,8 +76,7 @@ export default function MainPage() {
               color="text.secondary"
               paragraph
             >
-              У мяне цудоўныя навіны! У выдавецтве &laquo;Тэхналогія&raquo;
-              выйшаў{" "}
+              У выдавецтве &laquo;Тэхналогія&raquo; выйшаў{" "}
               <MUILink
                 href="https://www.livelib.ru/book/1007675719-belaruskiya-nyachystsiki-lyasnyya-artur-basak"
                 target="_blank"
@@ -92,7 +91,7 @@ export default function MainPage() {
               >
                 Аліны Длатоўскай
               </MUILink>
-              .
+              . Шукайце кнігу ў беларускіх кнігарнях.
             </Typography>
             {isBookPhotoLoading && (
               <Skeleton
@@ -117,43 +116,77 @@ export default function MainPage() {
                 display: isBookPhotoLoading ? "none" : "inherit",
               }}
             />
-            <Typography
-              variant="h7"
-              align="center"
-              color="text.secondary"
-              paragraph
-            >
-              Знайсці і набыць кнігу або замовіць яе анлайн можна у{" "}
-              <MUILink
-                href="https://tn.by/product/bielaruskija-niacysciki-liasnyja/"
-                target="_blank"
-              >
-                краме выдавецтва &laquo;Тэхналогія&raquo;
-              </MUILink>
-              , у крамах{" "}
-              <MUILink
-                href="https://akademkniga-books.by/catalog/osnovnoy_razdel_tovarov/belaruskiya_nyachystsiki_lyasnyya/"
-                target="_blank"
-              >
-                &laquo;Акадэмкніга&raquo;
-              </MUILink>
-              , &laquo;Белкніга&raquo;, &laquo;Светоч&raquo;,{" "}
-              <MUILink
-                href="https://kniganosha.by/catalog/belaruskiya_nyachysciki_lyasnyya"
-                target="_blank"
-              >
-                &laquo;Кніганоша&raquo;
-              </MUILink>{" "}
-              у Менску, а таксама ў краме{" "}
-              <MUILink
-                href="https://cudounia.by/item/belaruskiya-nyacysciki"
-                target="_blank"
-              >
-                &laquo;Цудоўня&raquo;
-              </MUILink>{" "}
-              у Гродна.
-            </Typography>
             <Divider sx={{ width: "100%", margin: "32px 0" }} />
+            <Box
+              sx={{
+                alignItems: "center",
+                justifyContent: "even-space",
+                display: { xs: "none", sm: "flex" },
+              }}
+            >
+              <Link to="/monsters">
+                <div className="card">
+                  <div className="wrapper">
+                    <img
+                      src="assets/forest/Hajouka-1.png"
+                      className="cover-image"
+                      alt=""
+                      role="presentation"
+                    />
+                  </div>
+                  <img
+                    src="assets/monsters-text.png"
+                    className="title"
+                    alt="Беларускія нячысцікі"
+                  />
+                  <img
+                    src="assets/Hajouka-removebg-preview.png"
+                    className="character"
+                    role="presentation"
+                    style={{
+                      filter: "drop-shadow(0px 8px 15px black) brightness(1.1)",
+                      height: "300px",
+                      width: "auto",
+                    }}
+                    alt=""
+                  />
+                </div>
+              </Link>
+              <Link to="/gods">
+                <div className="card">
+                  <div className="wrapper">
+                    <img
+                      src="assets/gods/God-1.png"
+                      className="cover-image"
+                      role="presentation"
+                      alt=""
+                    />
+                  </div>
+                  <img
+                    src="assets/gods-text.png"
+                    className="title"
+                    alt="Паганскія багі"
+                    style={{
+                      height: "40px",
+                      width: "auto",
+                    }}
+                  />
+                  <img
+                    src="assets/God-removebg-preview.png"
+                    className="character"
+                    role="presentation"
+                    alt=""
+                  />
+                </div>
+              </Link>
+            </Box>
+            <Divider
+              sx={{
+                width: "100%",
+                margin: "32px 0",
+                display: { xs: "none", sm: "block" },
+              }}
+            />
             <Box
               sx={{
                 display: "flex",

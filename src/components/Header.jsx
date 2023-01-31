@@ -12,8 +12,6 @@ import Drawer from "@mui/material/Drawer";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Tooltip from "@mui/material/Tooltip";
 
-// import BrushIcon from "@mui/icons-material/Brush";
-// import ColorLensIcon from "@mui/icons-material/ColorLens";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
@@ -79,7 +77,6 @@ export default function Header() {
           sx={{ display: "flex", alignItems: "center", marginRight: "16px" }}
         >
           <Button component={Link} to="/" sx={{ color: "#fff" }}>
-            {/* <BrushIcon /> */}
             <Box
               component="div"
               sx={{
@@ -100,26 +97,25 @@ export default function Header() {
                 Gallery
               </Typography>
             </Box>
-            {/* <ColorLensIcon /> */}
           </Button>
-          <Box component="nav" sx={{ display: { xs: "none", sm: "flex" } }}>
-            {navItems.map((item) => (
-              <React.Fragment key={item.name}>
-                <Divider
-                  light
-                  sx={{ bgcolor: "gray" }}
-                  orientation="vertical"
-                  variant="middle"
-                  flexItem
-                />
-                <Button component={Link} to={item.to} sx={{ color: "#fff" }}>
-                  {item.name}
-                </Button>
-              </React.Fragment>
-            ))}
-          </Box>
         </Box>
         <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+          <Box component="nav" sx={{ display: { xs: "none", sm: "flex" } }}>
+                {navItems.map((item) => (
+                    <React.Fragment key={item.name}>
+                        <Button component={Link} to={item.to} sx={{ color: "#fff" }}>
+                            {item.name}
+                        </Button>
+                        <Divider
+                            light
+                            sx={{ bgcolor: "gray" }}
+                            orientation="vertical"
+                            variant="middle"
+                            flexItem
+                        />
+                    </React.Fragment>
+                ))}
+            </Box>
           <SocialMedia color="#FFF" />
         </Box>
         <IconButton

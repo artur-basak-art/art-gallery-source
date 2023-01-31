@@ -1,6 +1,6 @@
 const news = [
   {
-    name: `Из леса и болот. Программист из Гродно рисует героев белорусской мифологии`,
+    name: `АиФ: Из леса и болот. Программист из Гродно рисует героев белорусской мифологии`,
     date: 'Студзень 5, 2023',
     url: 'https://aif.by/timefree/uvlechenie/iz_lesa_i_bolot_programmist_iz_grodno_risuet_geroev_belorusskoy_mifologii',
   },
@@ -8,6 +8,11 @@ const news = [
     name: `Інтэрв'ю дзіцячаму часопісу "Бярозка" (№10 / 2022)`,
     date: 'Лістапад 1, 2022',
     url: 'http://www.dompressy.by/2022/10/21/anons-dzyacyataga-numara/',
+  },
+  {
+    name: `Трепещите, дизайн идет – Беларусский бестиарий`,
+    date: 'Кастрычнік 31, 2022',
+    url: 'https://right.by/blog/digests/201-digest/',
   },
   {
     name: `Артыкул у часопісе Chrysalis Mag – Belarusian Contemporary Art Magazine`,
@@ -33,6 +38,11 @@ const news = [
     name: `[OBZOOR] Худы "з Малевічам" у трэндзе? Для чаго дызайнеры выкарыстоўваюць нацыянальныя традыцыі і мастацтва ў сваіх працах`,
     date: 'Лістапад , 2021',
     url: 'https://obzoor.by/shopping/hudi-s-malevichem-v-trende-zachem-dizajnery-ispolzujut-nacionalnye-tradicii-i-iskusstvo-v-svoih-rabotah/',
+  },
+  {
+    name: `Русалки без хвоста, ухающий Шеша и Возила с конской головой: какими были белорусские боги и духи`,
+    date: 'Лістапад 27 , 2021',
+    url: 'https://smartpress.by/idea/istoriya/15163/?sphrase_id=4736081',
   },
   {
     name: `Адукар: Сем пачварыкаў з беларускай міфалогіі, якія могуць напалохаць больш за прывідаў`,
