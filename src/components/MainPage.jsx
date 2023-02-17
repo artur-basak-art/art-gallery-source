@@ -117,6 +117,49 @@ export default function MainPage() {
               }}
             />
             <Divider sx={{ width: "100%", margin: "32px 0" }} />
+            <Typography
+              variant="h7"
+              align="center"
+              color="text.secondary"
+              paragraph
+            >
+              Зпампоўвайце наборы налепак для папулярных мэссэнджэраў
+              <br />
+              <br />
+              <MUILink
+                href="https://stickers.viber.com/pages/custom-sticker-packs/11edae246e95a3c89680e1660801aa39ffaf04a4ff622565"
+                target="_blank"
+              >
+                для Viber
+              </MUILink>
+              {" | "}
+              <MUILink
+                href="https://t.me/addstickers/belarusian_monsters"
+                target="_blank"
+              >
+                для Telegram
+              </MUILink>
+              {" | "}
+              <MUILink
+                href="/files/belarusian_monsters.wastickers"
+                target="_blank"
+              >
+                для WhatsApp
+              </MUILink>
+            </Typography>
+            <Box
+              component="img"
+              src="/assets/stickerpack.png"
+              alt="Набор налепак Беларускія Нячысцікі"
+              onLoad={handleBookPhotoLoad}
+              sx={{
+                width: { xs: "calc(100vw - 32px)", sm: "550px" },
+                height: { xs: "auto" },
+                margin: "16px 0 32px",
+                display: isBookPhotoLoading ? "none" : "inherit",
+              }}
+            />
+            <Divider sx={{ width: "100%", margin: "32px 0" }} />
             <Box
               sx={{
                 alignItems: "center",
@@ -124,6 +167,19 @@ export default function MainPage() {
                 display: { xs: "none", sm: "flex" },
               }}
             >
+              <Typography
+                variant="h5"
+                align="left"
+                sx={{
+                  maxWidth: "286px",
+                  marginTop: { xs: "32px", sm: "inherit" },
+                  marginBottom: "16px",
+                }}
+                color="text.secondary"
+                paragraph
+              >
+                ГАЛЕРЭІ ІЛЮСТРАЦЫЙ
+              </Typography>
               <Link to="/monsters">
                 <div className="card">
                   <div className="wrapper">
