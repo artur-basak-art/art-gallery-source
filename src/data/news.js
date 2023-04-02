@@ -1,5 +1,15 @@
 const news = [
   {
+    name: `"Новости Клецка и Клецкого района. Да новых перамог": У Клецка появился свой мифический персонаж. Как он выглядит`,
+    date: 'Сакавік 31, 2023',
+    url: 'https://www.kleck.by/?p=85128',
+  },
+  {
+    name: `Homeldays: Кніга “Беларускія нячысцікі: лясныя” – цяпер даступная анлайн`,
+    date: 'Сакавік 29, 2023',
+    url: 'https://homeldays.org/kniga-belaruskija-njachysciki/',
+  },
+  {
     name: `АиФ: Из леса и болот. Программист из Гродно рисует героев белорусской мифологии`,
     date: 'Студзень 5, 2023',
     url: 'https://aif.by/timefree/uvlechenie/iz_lesa_i_bolot_programmist_iz_grodno_risuet_geroev_belorusskoy_mifologii',

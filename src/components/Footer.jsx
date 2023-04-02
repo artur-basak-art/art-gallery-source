@@ -6,6 +6,7 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
@@ -62,6 +63,16 @@ export default function Footer() {
             target="_blank"
           >
             <FacebookIcon />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Twitter">
+          <IconButton
+            variant="outlined"
+            component="a"
+            href="https://twitter.com/ArturBasak"
+            target="_blank"
+          >
+            <TwitterIcon />
           </IconButton>
         </Tooltip>
         <Tooltip title="Pinterest">

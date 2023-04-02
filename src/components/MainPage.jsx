@@ -92,6 +92,14 @@ export default function MainPage() {
                 Аліны Длатоўскай
               </MUILink>
               . Шукайце кнігу ў беларускіх кнігарнях.
+              <br />
+              Лічбавую PDF-версію кнігі можна зпампаваць{" "}
+              <MUILink
+                href="/files/Belarusian-monsters-Part-1-forest.pdf"
+                target="_blank"
+              >
+                тут бясплатна.{" "}
+              </MUILink>{" "}
             </Typography>
             {isBookPhotoLoading && (
               <Skeleton
