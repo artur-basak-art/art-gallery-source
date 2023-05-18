@@ -29,6 +29,14 @@ const navItems = [
     name: "БАГІ",
     to: "/gods",
   },
+  {
+    name: "ЗДАНІ",
+    to: "/ghosts",
+  },
+  {
+    name: "ПЕРАВАРАТНІ",
+    to: "/were-monsters",
+  },
 ];
 
 function SocialMedia({ color }) {
@@ -101,21 +109,21 @@ export default function Header() {
         </Box>
         <Box sx={{ display: { xs: "none", sm: "flex" } }}>
           <Box component="nav" sx={{ display: { xs: "none", sm: "flex" } }}>
-                {navItems.map((item) => (
-                    <React.Fragment key={item.name}>
-                        <Button component={Link} to={item.to} sx={{ color: "#fff" }}>
-                            {item.name}
-                        </Button>
-                        <Divider
-                            light
-                            sx={{ bgcolor: "gray" }}
-                            orientation="vertical"
-                            variant="middle"
-                            flexItem
-                        />
-                    </React.Fragment>
-                ))}
-            </Box>
+            {navItems.map((item) => (
+              <React.Fragment key={item.name}>
+                <Button component={Link} to={item.to} sx={{ color: "#fff" }}>
+                  {item.name}
+                </Button>
+                <Divider
+                  light
+                  sx={{ bgcolor: "gray" }}
+                  orientation="vertical"
+                  variant="middle"
+                  flexItem
+                />
+              </React.Fragment>
+            ))}
+          </Box>
           <SocialMedia color="#FFF" />
         </Box>
         <IconButton

@@ -8,6 +8,8 @@ import { blueGrey, grey } from "@mui/material/colors";
 
 import MainPage from "./components/MainPage";
 import MonstersPage from "./components/MonstersPage";
+import WereMonstersPage from "./components/WereMonstersPage";
+import GhostsPage from "./components/GhostsPage";
 import GodsPage from "./components/GodsPage";
 import ErrorPage from "./components/ErrorPage";
 import NewsPage from "./components/NewsPage";
@@ -18,6 +20,8 @@ import CookieAlert from "./components/CookieAlert";
 import loadNews from "./data/news";
 import loadGods from "./data/gods";
 import loadMonsters from "./data/monsters";
+import loadWereMonsters from "./data/were-monsters";
+import loadGhosts from "./data/ghosts";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -48,6 +52,30 @@ const router = createHashRouter([
     children: [
       {
         path: "/monsters/:characterId",
+        element: <Details />,
+      },
+    ],
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/ghosts",
+    element: <GhostsPage />,
+    loader: loadGhosts,
+    children: [
+      {
+        path: "/ghosts/:characterId",
+        element: <Details />,
+      },
+    ],
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/were-monsters",
+    element: <WereMonstersPage />,
+    loader: loadWereMonsters,
+    children: [
+      {
+        path: "/were-monsters/:characterId",
         element: <Details />,
       },
     ],

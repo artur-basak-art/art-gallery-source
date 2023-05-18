@@ -152,7 +152,7 @@ export default function Details(props) {
             <Typography
               component="small"
               variant="body2"
-              sx={{ display: "inline-block", marginTop: "16px" }}
+              sx={{ display: "none", marginTop: "16px" }}
             >
               {`Літаратура і крыніцы: ${
                 character.source ||
