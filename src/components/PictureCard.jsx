@@ -35,9 +35,9 @@ export default function PictureCard(props) {
     <Card
       onClick={handleCardClick}
       sx={{
-        height: {
-          xs: "inherit",
-          sm: "520px",
+        border: "1px solid transparent",
+        "&:hover": {
+          border: "1px solid white",
         },
         display: "flex",
         flexDirection: "column",
@@ -59,7 +59,6 @@ export default function PictureCard(props) {
       />
       <CardContent
         sx={{
-          flexGrow: 1,
           paddingBottom: 0,
           textAlign: {
             xs: "center",
@@ -67,10 +66,25 @@ export default function PictureCard(props) {
           },
         }}
       >
-        <Typography gutterBottom variant="h6" component="h2">
+        <Typography
+          gutterBottom
+          variant="h6"
+          component="h2"
+          sx={{ fontWeight: "bold" }}
+        >
           {pic.name}
         </Typography>
-        <Typography component="p">{pic.description}</Typography>
+        <Typography
+          component="p"
+          sx={{
+            display: "-webkit-box",
+            webkitBoxOrient: "vertical",
+            webkitLineClamp: "2",
+            overflow: "hidden",
+          }}
+        >
+          <span dangerouslySetInnerHTML={{ __html: pic.description }} />
+        </Typography>
       </CardContent>
       <CardActions>
         <Button size="small">Чытаць падрабязней</Button>

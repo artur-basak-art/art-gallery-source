@@ -1,17 +1,16 @@
 // noinspection RequiredAttributes
 
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
-import CardMedia from "@mui/material/CardMedia";
+import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-import Skeleton from "@mui/material/Skeleton";
 import Card from "@mui/material/Card";
 import Tooltip from "@mui/material/Tooltip";
 
@@ -24,6 +23,7 @@ import { copyTextToClipboard } from "../services/copy";
 
 import loadGods from "../data/gods";
 import loadMonsters from "../data/monsters";
+import loadWereMonsters from "../data/were-monsters";
 
 const {
   data: { categories: godsCategories },
@@ -31,13 +31,21 @@ const {
 const {
   data: { categories: monstersCategories },
 } = loadMonsters();
-const characters = [...godsCategories, ...monstersCategories]
+const {
+  data: { categories: wereMonstersCategories },
+} = loadWereMonsters();
+
+const characters = [
+  ...godsCategories,
+  ...monstersCategories,
+  ...wereMonstersCategories,
+]
   .map((category) =>
     category.items.map((item) => ({
       ...item,
       url: `/assets/${category.path}/${item.src}-1.png`,
       urlLow: `/assets/${category.path}/${item.src}-1-1.png`,
-      urlSet: `/assets/${category.path}/${item.src}-1-1.png, /assets/${category.path}/${item.src}-1.png 2x`,
+      urlSet: `image-set(url("/assets/${category.path}/${item.src}-1-1.png") 1x, url("/assets/${category.path}/${item.src}-1.png") 2x)`,
     }))
   )
   .flat();
@@ -68,7 +76,6 @@ export default function Details(props) {
   const navigateTo = useNavigate();
   const { characterId } = useParams();
   const character = characters.find((c) => c.src === characterId);
-  const [isLoading, setLoading] = useState(true);
 
   const handleClose = () => {
     navigateTo(-1);
@@ -110,7 +117,13 @@ export default function Details(props) {
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent sx={{ padding: { sm: "20px 24px", xs: "16px 4px" } }}>
+      <DialogContent
+        sx={{
+          padding: { sm: "20px 24px", xs: "16px 4px" },
+          backgroundImage: "none",
+          backgroundColor: "#241d25",
+        }}
+      >
         <Card
           sx={{
             display: "flex",
@@ -118,30 +131,21 @@ export default function Details(props) {
             alignItems: "center",
             justifyContent: "center",
             boxShadow: "none",
+            backgroundImage: "none",
+            backgroundColor: "#241d25",
           }}
         >
-          {isLoading && (
-            <Skeleton
-              variant="rectangular"
-              width={350}
-              height={436}
-              animation="wave"
-            />
-          )}
-          <CardMedia
+          <Box
             sx={{
               minHeight: "436px",
               height: "436px",
               width: "350px",
               maxWidth: "350px",
-              display: isLoading ? "none" : "inherit",
+              backgroundImage: character.urlSet,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              boxShadow: "0px -9px 9px 9px #241d25 inset",
             }}
-            component="img"
-            decoding="async"
-            src={character.urlLow}
-            srcSet={character.urlSet}
-            onLoad={() => setLoading(false)}
-            alt="random"
           />
           <CardContent sx={{ flexGrow: 1, paddingBottom: 0 }}>
             <Typography component="p">

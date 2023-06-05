@@ -15,16 +15,13 @@ import ErrorPage from "./components/ErrorPage";
 import NewsPage from "./components/NewsPage";
 import Details from "./components/Details";
 import ScrollTop from "./components/ScrollTop";
-import CookieAlert from "./components/CookieAlert";
 
 import loadNews from "./data/news";
 import loadGods from "./data/gods";
 import loadMonsters from "./data/monsters";
 import loadWereMonsters from "./data/were-monsters";
 import loadGhosts from "./data/ghosts";
-
-import reportWebVitals from "./reportWebVitals";
-
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import "./index.css";
 
 const router = createHashRouter([
@@ -91,8 +88,9 @@ const router = createHashRouter([
 
 const theme = createTheme({
   palette: {
+    mode: "dark",
     primary: {
-      main: grey[900],
+      main: grey[200],
     },
     secondary: {
       main: blueGrey[800],
@@ -107,12 +105,8 @@ root.render(
       <CssBaseline />
       <RouterProvider router={router} />
       <ScrollTop />
-      <CookieAlert />
     </ThemeProvider>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+serviceWorkerRegistration.register();

@@ -27,6 +27,9 @@ export default function ScrollTop() {
       >
         <Fab
           onClick={scrollToTop}
+          sx={{
+            background: "#272727",
+          }}
           color="primary"
           size="small"
           aria-label="scroll back to top"

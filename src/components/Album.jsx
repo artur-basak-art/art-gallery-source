@@ -78,13 +78,14 @@ export default function Album({ categories, title, description }) {
           maxWidth="md"
         >
           {categories.map((category) => (
-            <>
+            <Box key={`g-${category.name}`}>
               <Typography
                 sx={{
                   fontSize: {
                     xs: "18px",
                     sm: "28px",
                   },
+                  fontWeight: "bold",
                   paddingTop: {
                     sm: 4,
                     xs: "24px",
@@ -103,7 +104,7 @@ export default function Album({ categories, title, description }) {
               </Typography>
               <Grid container spacing={3}>
                 {category.items.map((card) => (
-                  <Grid item key={card.title} xs={12} sm={6} md={4}>
+                  <Grid item key={`${card.name}`} xs={12} sm={6} md={4}>
                     <PictureCard
                       pic={{
                         id: card.src,
@@ -115,7 +116,7 @@ export default function Album({ categories, title, description }) {
                   </Grid>
                 ))}
               </Grid>
-            </>
+            </Box>
           ))}
         </Container>
       </main>

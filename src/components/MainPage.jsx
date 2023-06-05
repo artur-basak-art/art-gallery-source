@@ -161,6 +161,7 @@ export default function MainPage() {
               alt="Набор налепак Беларускія Нячысцікі"
               onLoad={handleBookPhotoLoad}
               sx={{
+                borderRadius: '16px',
                 width: { xs: "calc(100vw - 32px)", sm: "550px" },
                 height: { xs: "auto" },
                 margin: "16px 0 32px",
