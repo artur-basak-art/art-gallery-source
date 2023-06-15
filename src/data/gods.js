@@ -1,6 +1,7 @@
 const gods = [
   {
     name: "Старажытныя Багі",
+    root: "gods",
     path: "gods",
     items: [
       {

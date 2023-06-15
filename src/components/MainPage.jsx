@@ -9,6 +9,7 @@ import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";
 import MUILink from "@mui/material/Link";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -27,6 +28,18 @@ export default function MainPage() {
   return (
     <div>
       <Header />
+      <Helmet>
+          <meta
+              name="description"
+              content="Артур Басак, мастак-самавук, ілюстратар, праграміст і UI інжынер, які натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў, міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце. Яго малюнкі жыўцом можна пабачыць у Музеі Міфаў Бярэзінскага Запаведніка, Лідскім Замку, а таксама онлайн у Instagram акаунце @belarusian_monsters"
+          />
+          <meta property="og:locale" content="be_BY" />
+          <meta property="og:title" content="Артур Басак" />
+          <meta property="og:description" content="мастак-самавук, ілюстратар, праграміст і UI інжынер, які натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў, міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце." />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="https://arturbasak.art" />
+          <meta property="og:image" content="https://arturbasak.art/assets/cover2.jpeg" />
+      </Helmet>
       <main
         style={{
           display: "flex",
@@ -161,7 +174,7 @@ export default function MainPage() {
               alt="Набор налепак Беларускія Нячысцікі"
               onLoad={handleBookPhotoLoad}
               sx={{
-                borderRadius: '16px',
+                borderRadius: "16px",
                 width: { xs: "calc(100vw - 32px)", sm: "550px" },
                 height: { xs: "auto" },
                 margin: "16px 0 32px",

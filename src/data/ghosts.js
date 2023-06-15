@@ -2,6 +2,7 @@ const ghosts = [
   {
     name: "",
     path: "ghosts",
+    root: "ghosts",
     items: [
 
     ],

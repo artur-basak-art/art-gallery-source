@@ -13,6 +13,7 @@ import Avatar from "@mui/material/Avatar";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 
 import Button from "@mui/material/Button";
+import { Helmet } from "react-helmet";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -21,6 +22,24 @@ export default function NewsPage() {
 
   return (
     <div>
+      <Helmet>
+        <meta
+          name="description"
+          content="Артур Басак, мастак-самавук, ілюстратар, праграміст і UI інжынер, які натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў, міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце. Яго малюнкі жыўцом можна пабачыць у Музеі Міфаў Бярэзінскага Запаведніка, Лідскім Замку, а таксама онлайн у Instagram акаунце @belarusian_monsters"
+        />
+        <meta property="og:locale" content="be_BY" />
+        <meta property="og:title" content="Артур Басак" />
+        <meta
+          property="og:description"
+          content="мастак-самавук, ілюстратар, праграміст і UI інжынер, які натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў, міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://arturbasak.art" />
+        <meta
+          property="og:image"
+          content="https://arturbasak.art/assets/cover2.jpeg"
+        />
+      </Helmet>
       <Header />
       <main
         style={{

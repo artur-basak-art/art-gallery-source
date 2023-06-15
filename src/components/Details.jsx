@@ -19,6 +19,7 @@ import SaveIcon from "@mui/icons-material/Save";
 import PrintIcon from "@mui/icons-material/Print";
 import CloseIcon from "@mui/icons-material/Close";
 
+import { Helmet } from "react-helmet";
 import { copyTextToClipboard } from "../services/copy";
 
 import loadGods from "../data/gods";
@@ -43,6 +44,7 @@ const characters = [
   .map((category) =>
     category.items.map((item) => ({
       ...item,
+      pageUrl: `/#/${category.root}/${item.src}`,
       url: `/assets/${category.path}/${item.src}-1.png`,
       urlLow: `/assets/${category.path}/${item.src}-1-1.png`,
       urlSet: `image-set(url("/assets/${category.path}/${item.src}-1-1.png") 1x, url("/assets/${category.path}/${item.src}-1.png") 2x)`,
@@ -102,6 +104,22 @@ export default function Details(props) {
 
   return (
     <Dialog onClose={handleClose} open>
+      <Helmet>
+        <title>{character.name}</title>
+        <meta name="description" content={character.description} />
+        <meta property="og:locale" content="be_BY" />
+        <meta property="og:title" content={character.name} />
+        <meta property="og:description" content={character.description} />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content={`https://arturbasak.art${character.pageUrl}`}
+        />
+        <meta
+          property="og:image"
+          content={`https://arturbasak.art${character.url}`}
+        />
+      </Helmet>
       <DialogTitle sx={{ textAlign: "center" }}>
         {character.name}
         <IconButton

@@ -2,6 +2,7 @@ const wereMonsters = [
   {
     name: "",
     path: "were-monsters",
+    root: "were-monsters",
     items: [
       {
         name: "Жабалака",

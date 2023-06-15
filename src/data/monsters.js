@@ -1327,26 +1327,31 @@ const monsters = [
   {
     name: "Лясныя",
     path: "forest",
+    root: "monsters",
     items: [...forest],
   },
   {
     name: "Балотныя",
     path: "swamp",
+    root: "monsters",
     items: [...swamp],
   },
   {
     name: "Дварова-хатнія",
     path: "home",
+    root: "monsters",
     items: [...home],
   },
   {
     name: "Водныя",
     path: "water",
+    root: "monsters",
     items: [...water],
   },
   {
     name: "Паветраныя, Палявыя ды іншыя",
     path: "windField",
+    root: "monsters",
     items: [...windField],
   },
 ];

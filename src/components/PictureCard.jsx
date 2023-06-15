@@ -37,7 +37,10 @@ export default function PictureCard(props) {
       sx={{
         border: "1px solid transparent",
         "&:hover": {
-          border: "1px solid white",
+          border: {
+            xs: "1px solid transparent",
+            sm: "1px solid white",
+          },
         },
         display: "flex",
         flexDirection: "column",
