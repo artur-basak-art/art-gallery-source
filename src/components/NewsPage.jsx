@@ -11,6 +11,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import Button from "@mui/material/Button";
 import { Helmet } from "react-helmet";
@@ -84,7 +85,12 @@ export default function NewsPage() {
             >
               Згадкі мастака ў СМІ
             </Typography>
-            <Button size="small" component={LinkRouter} to="/">
+            <Button
+              size="small"
+              startIcon={<ArrowBackIcon />}
+              component={LinkRouter}
+              to="/"
+            >
               НАЗАД
             </Button>
             <List

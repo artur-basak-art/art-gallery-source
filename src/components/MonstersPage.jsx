@@ -26,7 +26,12 @@ export default function MonstersPage() {
           content="https://arturbasak.art/assets/forest/Hajouka-1-1.png"
         />
       </Helmet>
-      <Album categories={categories} title={title} description={description} />
+      <Album
+        categories={categories}
+        title={title}
+        description={description}
+        withImage="/assets/jan-kliks-lashkevich.png"
+      />
       <Outlet />
     </>
   );

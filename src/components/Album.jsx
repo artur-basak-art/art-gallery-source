@@ -9,7 +9,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ForestStar from "./icons/ForestStar";
 
-export default function Album({ categories, title, description }) {
+export default function Album({ categories, title, description, withImage }) {
   return (
     <>
       <Header />
@@ -31,6 +31,7 @@ export default function Album({ categories, title, description }) {
             maxWidth="sm"
             sx={{
               bgcolor: "background.paper",
+              textAlign: "center",
             }}
           >
             <Typography
@@ -57,6 +58,15 @@ export default function Album({ categories, title, description }) {
               {/* eslint-disable-next-line react/no-danger */}
               <span dangerouslySetInnerHTML={{ __html: description }} />
             </Typography>
+            {withImage && (
+              <Box
+                component="img"
+                src={withImage}
+                width="auto"
+                height={356}
+                alt="Выява Яна Клікста Лашкевіча"
+              />
+            )}
           </Container>
         </Box>
         <Box

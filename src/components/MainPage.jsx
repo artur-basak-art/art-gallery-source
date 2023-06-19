@@ -5,6 +5,7 @@ import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import Button from "@mui/material/Button";
 import MUILink from "@mui/material/Link";
@@ -29,16 +30,22 @@ export default function MainPage() {
     <div>
       <Header />
       <Helmet>
-          <meta
-              name="description"
-              content="Артур Басак, мастак-самавук, ілюстратар, праграміст і UI інжынер, які натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў, міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце. Яго малюнкі жыўцом можна пабачыць у Музеі Міфаў Бярэзінскага Запаведніка, Лідскім Замку, а таксама онлайн у Instagram акаунце @belarusian_monsters"
-          />
-          <meta property="og:locale" content="be_BY" />
-          <meta property="og:title" content="Артур Басак" />
-          <meta property="og:description" content="мастак-самавук, ілюстратар, праграміст і UI інжынер, які натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў, міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце." />
-          <meta property="og:type" content="article" />
-          <meta property="og:url" content="https://arturbasak.art" />
-          <meta property="og:image" content="https://arturbasak.art/assets/cover2.jpeg" />
+        <meta
+          name="description"
+          content="Артур Басак, мастак-самавук, ілюстратар, праграміст і UI інжынер, які натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў, міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце. Яго малюнкі жыўцом можна пабачыць у Музеі Міфаў Бярэзінскага Запаведніка, Лідскім Замку, а таксама онлайн у Instagram акаунце @belarusian_monsters"
+        />
+        <meta property="og:locale" content="be_BY" />
+        <meta property="og:title" content="Артур Басак" />
+        <meta
+          property="og:description"
+          content="мастак-самавук, ілюстратар, праграміст і UI інжынер, які натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў, міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://arturbasak.art" />
+        <meta
+          property="og:image"
+          content="https://arturbasak.art/assets/cover2.jpeg"
+        />
       </Helmet>
       <main
         style={{
@@ -258,6 +265,71 @@ export default function MainPage() {
                 </div>
               </Link>
             </Box>
+            <Box
+              sx={{
+                alignItems: "center",
+                justifyContent: "even-space",
+                flexDirection: "column",
+                display: { xs: "flex", sm: "none" },
+              }}
+            >
+              <Typography
+                variant="h5"
+                align="left"
+                sx={{
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  maxWidth: "286px",
+                  marginBottom: "16px",
+                }}
+                color="text.secondary"
+                paragraph
+              >
+                ГАЛЕРЭІ ІЛЮСТРАЦЫЙ
+              </Typography>
+              <Button
+                size="small"
+                sx={{ marginBottom: "8px" }}
+                component={Link}
+                startIcon={<ArrowForwardIcon />}
+                to="/monsters"
+              >
+                Беларускія Нячысцікі
+              </Button>
+              <Button
+                size="small"
+                sx={{ marginBottom: "8px" }}
+                component={Link}
+                startIcon={<ArrowForwardIcon />}
+                to="/gods"
+              >
+                Паганскія Багі
+              </Button>
+              <Button
+                size="small"
+                sx={{ marginBottom: "8px" }}
+                component={Link}
+                startIcon={<ArrowForwardIcon />}
+                to="/ghosts"
+              >
+                Беларускія Здані
+              </Button>
+              <Button
+                size="small"
+                component={Link}
+                startIcon={<ArrowForwardIcon />}
+                to="/were-monsters"
+              >
+                Пярэваратні
+              </Button>
+            </Box>
+            <Divider
+              sx={{
+                width: "100%",
+                margin: "32px 0",
+                display: { xs: "block", sm: "none" },
+              }}
+            />
             <Divider
               sx={{
                 width: "100%",
@@ -311,7 +383,12 @@ export default function MainPage() {
                   </MUILink>{" "}
                   і канешне ж тут на гэтым сайце.
                 </Typography>
-                <Button size="small" component={Link} to="/news">
+                <Button
+                  size="small"
+                  component={Link}
+                  to="/news"
+                  startIcon={<ArrowForwardIcon />}
+                >
                   СМІ аб аўтары
                 </Button>
               </Box>

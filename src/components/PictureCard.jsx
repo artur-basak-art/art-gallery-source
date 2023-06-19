@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function PictureCard(props) {
   const { pic } = props;
@@ -81,8 +82,8 @@ export default function PictureCard(props) {
           component="p"
           sx={{
             display: "-webkit-box",
-            webkitBoxOrient: "vertical",
-            webkitLineClamp: "2",
+            "-webkit-box-orient": "vertical",
+            "-webkit-line-clamp": "2",
             overflow: "hidden",
           }}
         >
@@ -90,7 +91,9 @@ export default function PictureCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Чытаць падрабязней</Button>
+        <Button size="small" startIcon={<ArrowForwardIcon />}>
+          Чытаць падрабязней
+        </Button>
       </CardActions>
     </Card>
   );

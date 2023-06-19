@@ -24,7 +24,7 @@ import loadGhosts from "./data/ghosts";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import "./index.css";
 
-export const router = createHashRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <MainPage />,
