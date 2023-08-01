@@ -84,11 +84,11 @@ export default function MainPage() {
               sx={{
                 fontSize: {
                   xs: "24px",
-                  sm: "40px",
+                  sm: "32px",
                 },
               }}
             >
-              Вітаю, Спадарства!
+              Першая частка &laquo;Беларускіх&nbsp;нячысцікаў&raquo; выдана!
             </Typography>
             <Typography
               variant="h7"
@@ -264,6 +264,60 @@ export default function MainPage() {
                   />
                 </div>
               </Link>
+              <Link to="/ghosts">
+                    <div className="card">
+                        <div className="wrapper">
+                            <img
+                                src="assets/ghosts/belaja-panna-mirskaja-1.png"
+                                className="cover-image"
+                                role="presentation"
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            src="assets/zdani-text.png"
+                            className="title"
+                            alt="Беларускія здані"
+                            style={{
+                                height: "40px",
+                                width: "auto",
+                            }}
+                        />
+                        <img
+                            src="assets/belaja-panna-bg-rm.png"
+                            className="character"
+                            role="presentation"
+                            alt=""
+                        />
+                    </div>
+                </Link>
+              <Link to="/were-monsters">
+                    <div className="card">
+                        <div className="wrapper">
+                            <img
+                                src="assets/were-monsters/zhabalaka-1.png"
+                                className="cover-image"
+                                role="presentation"
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            src="assets/were-monsters-text.png"
+                            className="title"
+                            alt="Пераваратні"
+                            style={{
+                                height: "40px",
+                                width: "auto",
+                            }}
+                        />
+                        <img
+                            src="assets/zhabalaka-bg-rm.png"
+                            className="character"
+                            role="presentation"
+                            alt=""
+                        />
+                    </div>
+                </Link>
             </Box>
             <Box
               sx={{
@@ -403,9 +457,9 @@ export default function MainPage() {
               )}
               <Box
                 component="img"
-                src="/assets/profile.png"
-                width={250}
-                height={280}
+                src="/assets/author.png"
+                width="auto"
+                height={320}
                 alt=""
                 onLoad={handleAuthorPhotoLoad}
                 sx={{

@@ -45,6 +45,8 @@ export default function PictureCard(props) {
         },
         display: "flex",
         flexDirection: "column",
+        height: "100%",
+        justifyContent: 'space-between',
         alignItems: {
           xs: "center",
           sm: "flex-start",

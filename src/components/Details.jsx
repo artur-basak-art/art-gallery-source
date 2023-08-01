@@ -23,6 +23,7 @@ import { Helmet } from "react-helmet";
 import { copyTextToClipboard } from "../services/copy";
 
 import loadGods from "../data/gods";
+import loadGhosts from "../data/ghosts";
 import loadMonsters from "../data/monsters";
 import loadWereMonsters from "../data/were-monsters";
 
@@ -35,9 +36,13 @@ const {
 const {
   data: { categories: wereMonstersCategories },
 } = loadWereMonsters();
+const {
+  data: { categories: ghostsCategories },
+} = loadGhosts();
 
 const characters = [
   ...godsCategories,
+  ...ghostsCategories,
   ...monstersCategories,
   ...wereMonstersCategories,
 ]
@@ -120,7 +125,7 @@ export default function Details(props) {
           content={`https://arturbasak.art${character.url}`}
         />
       </Helmet>
-      <DialogTitle sx={{ textAlign: "center" }}>
+      <DialogTitle sx={{ textAlign: "center", maxWidth: "320px" }}>
         {character.name}
         <IconButton
           aria-label="close"
