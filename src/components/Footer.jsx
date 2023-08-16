@@ -11,7 +11,6 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import EmailIcon from "@mui/icons-material/Email";
-import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 
 function Copyright() {
   return (
@@ -69,7 +68,7 @@ export default function Footer() {
           <IconButton
             variant="outlined"
             component="a"
-            href="https://twitter.com/ArturBasak"
+            href="https://twitter.com/belarusian_mons"
             target="_blank"
           >
             <TwitterIcon />
@@ -93,16 +92,6 @@ export default function Footer() {
             target="_blank"
           >
             <EmailIcon />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Patreon">
-          <IconButton
-            variant="outlined"
-            component="a"
-            href="https://www.patreon.com/belarusian_monsters"
-            target="_blank"
-          >
-            <VolunteerActivismIcon />
           </IconButton>
         </Tooltip>
       </ButtonGroup>

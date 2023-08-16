@@ -76,6 +76,210 @@ export default function MainPage() {
             }}
           >
             <Typography
+              variant="h5"
+              align="left"
+              sx={{
+                maxWidth: "286px",
+                marginTop: { xs: "32px", sm: "inherit" },
+                display: { xs: "none", sm: "flex" },
+                marginBottom: "16px",
+              }}
+              color="text.secondary"
+              paragraph
+            >
+              ГАЛЕРЭІ ІЛЮСТРАЦЫЙ
+            </Typography>
+            <Box
+              sx={{
+                alignItems: "center",
+                justifyContent: "even-space",
+                display: { xs: "none", sm: "flex" },
+              }}
+            >
+              <Link to="/monsters">
+                <div className="card">
+                  <div className="wrapper">
+                    <img
+                      src="assets/forest/Hajouka-1.png"
+                      className="cover-image"
+                      alt=""
+                      role="presentation"
+                    />
+                  </div>
+                  <img
+                    src="assets/monsters-text.png"
+                    className="title"
+                    alt="Беларускія нячысцікі"
+                  />
+                  <img
+                    src="assets/Hajouka-removebg-preview.png"
+                    className="character"
+                    role="presentation"
+                    style={{
+                      filter: "drop-shadow(0px 8px 15px black) brightness(1.1)",
+                      height: "300px",
+                      width: "auto",
+                    }}
+                    alt=""
+                  />
+                </div>
+              </Link>
+              <Link to="/gods">
+                <div className="card">
+                  <div className="wrapper">
+                    <img
+                      src="assets/gods/God-1.png"
+                      className="cover-image"
+                      role="presentation"
+                      alt=""
+                    />
+                  </div>
+                  <img
+                    src="assets/gods-text.png"
+                    className="title"
+                    alt="Паганскія багі"
+                    style={{
+                      height: "40px",
+                      width: "auto",
+                    }}
+                  />
+                  <img
+                    src="assets/God-removebg-preview.png"
+                    className="character"
+                    role="presentation"
+                    alt=""
+                  />
+                </div>
+              </Link>
+              <Link to="/ghosts">
+                <div className="card">
+                  <div className="wrapper">
+                    <img
+                      src="assets/ghosts/belaja-panna-mirskaja-1.png"
+                      className="cover-image"
+                      role="presentation"
+                      alt=""
+                    />
+                  </div>
+                  <img
+                    src="assets/zdani-text.png"
+                    className="title"
+                    alt="Беларускія здані"
+                    style={{
+                      height: "40px",
+                      width: "auto",
+                    }}
+                  />
+                  <img
+                    src="assets/belaja-panna-bg-rm.png"
+                    className="character"
+                    role="presentation"
+                    alt=""
+                  />
+                </div>
+              </Link>
+              <Link to="/were-monsters">
+                <div className="card">
+                  <div className="wrapper">
+                    <img
+                      src="assets/were-monsters/zhabalaka-1.png"
+                      className="cover-image"
+                      role="presentation"
+                      alt=""
+                    />
+                  </div>
+                  <img
+                    src="assets/were-monsters-text.png"
+                    className="title"
+                    alt="Пераваратні"
+                    style={{
+                      height: "40px",
+                      width: "auto",
+                    }}
+                  />
+                  <img
+                    src="assets/zhabalaka-bg-rm.png"
+                    className="character"
+                    role="presentation"
+                    alt=""
+                  />
+                </div>
+              </Link>
+            </Box>
+            <Typography
+              variant="h5"
+              align="left"
+              sx={{
+                fontSize: "16px",
+                fontWeight: "bold",
+                maxWidth: "286px",
+                marginBottom: "16px",
+                display: { xs: "flex", sm: "none" },
+              }}
+              color="text.secondary"
+              paragraph
+            >
+              ГАЛЕРЭІ ІЛЮСТРАЦЫЙ
+            </Typography>
+            <Box
+              sx={{
+                alignItems: "center",
+                justifyContent: "even-space",
+                flexDirection: "column",
+                display: { xs: "flex", sm: "none" },
+              }}
+            >
+              <Button
+                size="small"
+                sx={{ marginBottom: "8px" }}
+                component={Link}
+                startIcon={<ArrowForwardIcon />}
+                to="/monsters"
+              >
+                Беларускія Нячысцікі
+              </Button>
+              <Button
+                size="small"
+                sx={{ marginBottom: "8px" }}
+                component={Link}
+                startIcon={<ArrowForwardIcon />}
+                to="/gods"
+              >
+                Паганскія Багі
+              </Button>
+              <Button
+                size="small"
+                sx={{ marginBottom: "8px" }}
+                component={Link}
+                startIcon={<ArrowForwardIcon />}
+                to="/ghosts"
+              >
+                Беларускія Здані
+              </Button>
+              <Button
+                size="small"
+                component={Link}
+                startIcon={<ArrowForwardIcon />}
+                to="/were-monsters"
+              >
+                Пярэваратні
+              </Button>
+            </Box>
+            <Divider
+              sx={{
+                width: "100%",
+                margin: "32px 0",
+                display: { xs: "block", sm: "none" },
+              }}
+            />
+            <Divider
+              sx={{
+                width: "100%",
+                margin: "32px 0",
+                display: { xs: "none", sm: "block" },
+              }}
+            />
+            <Typography
               component="h1"
               variant="h2"
               align="center"
@@ -191,219 +395,23 @@ export default function MainPage() {
             <Divider sx={{ width: "100%", margin: "32px 0" }} />
             <Box
               sx={{
-                alignItems: "center",
-                justifyContent: "even-space",
-                display: { xs: "none", sm: "flex" },
-              }}
-            >
-              <Typography
-                variant="h5"
-                align="left"
-                sx={{
-                  maxWidth: "286px",
-                  marginTop: { xs: "32px", sm: "inherit" },
-                  marginBottom: "16px",
-                }}
-                color="text.secondary"
-                paragraph
-              >
-                ГАЛЕРЭІ ІЛЮСТРАЦЫЙ
-              </Typography>
-              <Link to="/monsters">
-                <div className="card">
-                  <div className="wrapper">
-                    <img
-                      src="assets/forest/Hajouka-1.png"
-                      className="cover-image"
-                      alt=""
-                      role="presentation"
-                    />
-                  </div>
-                  <img
-                    src="assets/monsters-text.png"
-                    className="title"
-                    alt="Беларускія нячысцікі"
-                  />
-                  <img
-                    src="assets/Hajouka-removebg-preview.png"
-                    className="character"
-                    role="presentation"
-                    style={{
-                      filter: "drop-shadow(0px 8px 15px black) brightness(1.1)",
-                      height: "300px",
-                      width: "auto",
-                    }}
-                    alt=""
-                  />
-                </div>
-              </Link>
-              <Link to="/gods">
-                <div className="card">
-                  <div className="wrapper">
-                    <img
-                      src="assets/gods/God-1.png"
-                      className="cover-image"
-                      role="presentation"
-                      alt=""
-                    />
-                  </div>
-                  <img
-                    src="assets/gods-text.png"
-                    className="title"
-                    alt="Паганскія багі"
-                    style={{
-                      height: "40px",
-                      width: "auto",
-                    }}
-                  />
-                  <img
-                    src="assets/God-removebg-preview.png"
-                    className="character"
-                    role="presentation"
-                    alt=""
-                  />
-                </div>
-              </Link>
-              <Link to="/ghosts">
-                    <div className="card">
-                        <div className="wrapper">
-                            <img
-                                src="assets/ghosts/belaja-panna-mirskaja-1.png"
-                                className="cover-image"
-                                role="presentation"
-                                alt=""
-                            />
-                        </div>
-                        <img
-                            src="assets/zdani-text.png"
-                            className="title"
-                            alt="Беларускія здані"
-                            style={{
-                                height: "40px",
-                                width: "auto",
-                            }}
-                        />
-                        <img
-                            src="assets/belaja-panna-bg-rm.png"
-                            className="character"
-                            role="presentation"
-                            alt=""
-                        />
-                    </div>
-                </Link>
-              <Link to="/were-monsters">
-                    <div className="card">
-                        <div className="wrapper">
-                            <img
-                                src="assets/were-monsters/zhabalaka-1.png"
-                                className="cover-image"
-                                role="presentation"
-                                alt=""
-                            />
-                        </div>
-                        <img
-                            src="assets/were-monsters-text.png"
-                            className="title"
-                            alt="Пераваратні"
-                            style={{
-                                height: "40px",
-                                width: "auto",
-                            }}
-                        />
-                        <img
-                            src="assets/zhabalaka-bg-rm.png"
-                            className="character"
-                            role="presentation"
-                            alt=""
-                        />
-                    </div>
-                </Link>
-            </Box>
-            <Box
-              sx={{
-                alignItems: "center",
-                justifyContent: "even-space",
-                flexDirection: "column",
-                display: { xs: "flex", sm: "none" },
-              }}
-            >
-              <Typography
-                variant="h5"
-                align="left"
-                sx={{
-                  fontSize: "16px",
-                  fontWeight: "bold",
-                  maxWidth: "286px",
-                  marginBottom: "16px",
-                }}
-                color="text.secondary"
-                paragraph
-              >
-                ГАЛЕРЭІ ІЛЮСТРАЦЫЙ
-              </Typography>
-              <Button
-                size="small"
-                sx={{ marginBottom: "8px" }}
-                component={Link}
-                startIcon={<ArrowForwardIcon />}
-                to="/monsters"
-              >
-                Беларускія Нячысцікі
-              </Button>
-              <Button
-                size="small"
-                sx={{ marginBottom: "8px" }}
-                component={Link}
-                startIcon={<ArrowForwardIcon />}
-                to="/gods"
-              >
-                Паганскія Багі
-              </Button>
-              <Button
-                size="small"
-                sx={{ marginBottom: "8px" }}
-                component={Link}
-                startIcon={<ArrowForwardIcon />}
-                to="/ghosts"
-              >
-                Беларускія Здані
-              </Button>
-              <Button
-                size="small"
-                component={Link}
-                startIcon={<ArrowForwardIcon />}
-                to="/were-monsters"
-              >
-                Пярэваратні
-              </Button>
-            </Box>
-            <Divider
-              sx={{
-                width: "100%",
-                margin: "32px 0",
-                display: { xs: "block", sm: "none" },
-              }}
-            />
-            <Divider
-              sx={{
-                width: "100%",
-                margin: "32px 0",
-                display: { xs: "none", sm: "block" },
-              }}
-            />
-            <Box
-              sx={{
                 display: "flex",
                 flexDirection: { xs: "column-reverse", sm: "initial" },
               }}
             >
-              <Box component="div">
+              <Box
+                component="div"
+                sx={{
+                  textAlign: { xs: "center", sm: "left" },
+                }}
+              >
                 <Typography
                   variant="h5"
                   align="left"
                   sx={{
                     maxWidth: "286px",
                     marginTop: { xs: "32px", sm: "inherit" },
+                    textAlign: { xs: "center", sm: "left" },
                   }}
                   color="text.secondary"
                   paragraph
@@ -416,6 +424,7 @@ export default function MainPage() {
                   sx={{
                     maxWidth: "286px",
                     marginTop: "8px",
+                    textAlign: { xs: "center", sm: "left" },
                   }}
                   color="text.secondary"
                   paragraph
@@ -458,12 +467,13 @@ export default function MainPage() {
               <Box
                 component="img"
                 src="/assets/author.png"
-                width="auto"
-                height={320}
                 alt=""
                 onLoad={handleAuthorPhotoLoad}
                 sx={{
                   marginLeft: { xs: "0", sm: "16px" },
+                  width: { xs: "320px", sm: "320px" },
+                  height: { xs: "auto", sm: "auto" },
+                  maxWidth: "calc(100vw - 20%)",
                   display: isAuthorPhotoLoading ? "none" : "inherit",
                 }}
               />

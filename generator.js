@@ -45,6 +45,7 @@ const content = `
 </urlset>
 `;
 
+console.log(content);
 fs.writeFile("./public/sitemap.xml", content, (err) => {
   if (err) {
     console.error(err);

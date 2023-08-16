@@ -14,7 +14,6 @@ import Tooltip from "@mui/material/Tooltip";
 
 import MoreIcon from "@mui/icons-material/MoreVert";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 
 const navItems = [
   {
@@ -50,16 +49,6 @@ function SocialMedia({ color }) {
           target="_blank"
         >
           <InstagramIcon htmlColor={color} />
-        </IconButton>
-      </Tooltip>
-      <Tooltip title="Patreon">
-        <IconButton
-          variant="outlined"
-          component="a"
-          href="https://www.patreon.com/belarusian_monsters"
-          target="_blank"
-        >
-          <VolunteerActivismIcon htmlColor={color} />
         </IconButton>
       </Tooltip>
     </ButtonGroup>
