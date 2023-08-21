@@ -17,6 +17,7 @@ import Footer from "./Footer";
 export default function MainPage() {
   const [isAuthorPhotoLoading, setAuthorPhotoLoading] = useState(true);
   const [isBookPhotoLoading, setBookPhotoLoading] = useState(true);
+  const [isExhibitionPhotoLoading, setExhibitionkPhotoLoading] = useState(true);
   const handleAuthorPhotoLoad = useCallback(
     () => setAuthorPhotoLoading(false),
     [setAuthorPhotoLoading]
@@ -24,6 +25,11 @@ export default function MainPage() {
   const handleBookPhotoLoad = useCallback(
     () => setBookPhotoLoading(false),
     [setBookPhotoLoading]
+  );
+
+  const handleExhibitionPhotoLoad = useCallback(
+    () => setExhibitionkPhotoLoading(false),
+    [setExhibitionkPhotoLoading]
   );
 
   return (
@@ -280,7 +286,54 @@ export default function MainPage() {
               }}
             />
             <Typography
-              component="h1"
+              component="h2"
+              variant="h2"
+              align="center"
+              color="text.primary"
+              gutterBottom
+              sx={{
+                fontSize: {
+                  xs: "24px",
+                  sm: "24px",
+                },
+              }}
+            >
+              Мастацкая выстава ілюстрацый &laquo;Беларускія&nbsp;Нячысцікі:
+              Русалкі&raquo; у межах фестывалю міфалогіі
+              &laquo;Шлях&nbsp;Цмока&raquo;
+            </Typography>
+            {isBookPhotoLoading && (
+              <Skeleton
+                sx={{
+                  margin: "16px 0 32px",
+                  width: { xs: "calc(100vw - 32px)", sm: "550px" },
+                }}
+                variant="rectangular"
+                height={550}
+                animation="wave"
+              />
+            )}
+            <Box
+              component="img"
+              src="/assets/exhibition.png"
+              alt=""
+              onLoad={handleExhibitionPhotoLoad}
+              sx={{
+                width: "calc(100vw - 32px)",
+                height: "auto",
+                margin: "16px 0 32px",
+                display: isExhibitionPhotoLoading ? "none" : "inherit",
+              }}
+            />
+            <Divider
+              sx={{
+                width: "100%",
+                margin: "32px 0",
+                display: { xs: "none", sm: "block" },
+              }}
+            />
+            <Typography
+              component="h2"
               variant="h2"
               align="center"
               color="text.primary"
