@@ -18,6 +18,7 @@ export default function MainPage() {
   const [isAuthorPhotoLoading, setAuthorPhotoLoading] = useState(true);
   const [isBookPhotoLoading, setBookPhotoLoading] = useState(true);
   const [isExhibitionPhotoLoading, setExhibitionkPhotoLoading] = useState(true);
+  const [isMuseumPhotoLoading, setMuseumPhotoLoading] = useState(true);
   const handleAuthorPhotoLoad = useCallback(
     () => setAuthorPhotoLoading(false),
     [setAuthorPhotoLoading]
@@ -30,6 +31,11 @@ export default function MainPage() {
   const handleExhibitionPhotoLoad = useCallback(
     () => setExhibitionkPhotoLoading(false),
     [setExhibitionkPhotoLoading]
+  );
+
+  const handleMuseumPhotoLoad = useCallback(
+    () => setMuseumPhotoLoading(false),
+    [setMuseumPhotoLoading]
   );
 
   return (
@@ -87,7 +93,7 @@ export default function MainPage() {
               sx={{
                 maxWidth: "286px",
                 marginTop: { xs: "32px", sm: "inherit" },
-                display: { xs: "none", sm: "flex" },
+                display: { xs: "none", md: "flex" },
                 marginBottom: "16px",
               }}
               color="text.secondary"
@@ -99,7 +105,7 @@ export default function MainPage() {
               sx={{
                 alignItems: "center",
                 justifyContent: "even-space",
-                display: { xs: "none", sm: "flex" },
+                display: { xs: "none", md: "flex" },
               }}
             >
               <Link to="/monsters">
@@ -220,7 +226,7 @@ export default function MainPage() {
                 fontWeight: "bold",
                 maxWidth: "286px",
                 marginBottom: "16px",
-                display: { xs: "flex", sm: "none" },
+                display: { xs: "flex", md: "none" },
               }}
               color="text.secondary"
               paragraph
@@ -232,7 +238,7 @@ export default function MainPage() {
                 alignItems: "center",
                 justifyContent: "even-space",
                 flexDirection: "column",
-                display: { xs: "flex", sm: "none" },
+                display: { xs: "flex", md: "none" },
               }}
             >
               <Button
@@ -302,7 +308,7 @@ export default function MainPage() {
               Русалкі&raquo; у межах фестывалю міфалогіі
               &laquo;Шлях&nbsp;Цмока&raquo;
             </Typography>
-            {isBookPhotoLoading && (
+            {isExhibitionPhotoLoading && (
               <Skeleton
                 sx={{
                   margin: "16px 0 32px",
@@ -323,6 +329,13 @@ export default function MainPage() {
                 height: "auto",
                 margin: "16px 0 32px",
                 display: isExhibitionPhotoLoading ? "none" : "inherit",
+              }}
+            />
+            <Divider
+              sx={{
+                width: "100%",
+                margin: "32px 0",
+                display: { xs: "block", sm: "none" },
               }}
             />
             <Divider
@@ -402,6 +415,59 @@ export default function MainPage() {
               }}
             />
             <Divider sx={{ width: "100%", margin: "32px 0" }} />
+            <Typography
+              component="h2"
+              variant="h2"
+              align="center"
+              color="text.primary"
+              gutterBottom
+              sx={{
+                fontSize: {
+                  xs: "24px",
+                  sm: "24px",
+                },
+              }}
+            >
+              &laquo;Беларускія&nbsp;Нячысцікі&raquo; у пастаяннай экспазіцыі
+              Музея Міфаў
+            </Typography>
+            {isMuseumPhotoLoading && (
+              <Skeleton
+                sx={{
+                  margin: "16px 0 32px",
+                  width: { xs: "calc(100vw - 32px)", sm: "550px" },
+                }}
+                variant="rectangular"
+                height={550}
+                animation="wave"
+              />
+            )}
+            <Box
+              component="img"
+              src="/assets/museum.png"
+              alt=""
+              onLoad={handleMuseumPhotoLoad}
+              sx={{
+                width: "calc(100vw - 32px)",
+                height: "auto",
+                margin: "16px 0 32px",
+                display: isMuseumPhotoLoading ? "none" : "inherit",
+              }}
+            />
+            <Divider
+              sx={{
+                width: "100%",
+                margin: "32px 0",
+                display: { xs: "block", sm: "none" },
+              }}
+            />
+            <Divider
+              sx={{
+                width: "100%",
+                margin: "32px 0",
+                display: { xs: "none", sm: "block" },
+              }}
+            />
             <Typography
               variant="h7"
               align="center"
