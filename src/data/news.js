@@ -1,5 +1,10 @@
 const news = [
   {
+    name: `"Лепельскі Край": «ШЛЯХ ЦМОКА» ПО ЗАГАДОЧНЫМ ТРОПАМ ЗАПОВЕДНИКА`,
+    date: 'Жнівень 22, 2023',
+    url: 'https://lepel-kraj.by/novosti/turizm/shlyah-cmoka-po-zagadochnym-tropam-zapovednika-22-08-2023',
+  },
+  {
     name: `"Новости Клецка и Клецкого района. Да новых перамог": У Клецка появился свой мифический персонаж. Как он выглядит`,
     date: 'Сакавік 31, 2023',
     url: 'https://www.kleck.by/?p=85128',
