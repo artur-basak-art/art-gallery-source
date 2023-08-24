@@ -3,26 +3,25 @@ const news = [
     name: `"Лепельскі Край": «ШЛЯХ ЦМОКА» ПО ЗАГАДОЧНЫМ ТРОПАМ ЗАПОВЕДНИКА`,
     date: 'Жнівень 22, 2023',
     url: 'https://lepel-kraj.by/novosti/turizm/shlyah-cmoka-po-zagadochnym-tropam-zapovednika-22-08-2023',
+    paper: 'lepel-kraj.png',
   },
   {
     name: `"Новости Клецка и Клецкого района. Да новых перамог": У Клецка появился свой мифический персонаж. Как он выглядит`,
     date: 'Сакавік 31, 2023',
     url: 'https://www.kleck.by/?p=85128',
-  },
-  {
-    name: `Homeldays: Кніга “Беларускія нячысцікі: лясныя” – цяпер даступная анлайн`,
-    date: 'Сакавік 29, 2023',
-    url: 'https://homeldays.org/kniga-belaruskija-njachysciki/',
+    paper: 'kleck.png',
   },
   {
     name: `АиФ: Из леса и болот. Программист из Гродно рисует героев белорусской мифологии`,
     date: 'Студзень 5, 2023',
     url: 'https://aif.by/timefree/uvlechenie/iz_lesa_i_bolot_programmist_iz_grodno_risuet_geroev_belorusskoy_mifologii',
+    paper: 'aif.jpeg',
   },
   {
     name: `Інтэрв'ю дзіцячаму часопісу "Бярозка" (№10 / 2022)`,
     date: 'Лістапад 1, 2022',
     url: 'http://www.dompressy.by/2022/10/21/anons-dzyacyataga-numara/',
+    paper: 'bjarozka.pdf',
   },
   {
     name: `Трепещите, дизайн идет – Беларусский бестиарий`,
@@ -48,6 +47,7 @@ const news = [
     name: `Разварот пра "Нячысцікаў" у забаўляльным дзіцячым часопісе "Каламбур" (№4 / 2022)`,
     date: 'Красавік 4, 2022',
     url: 'https://drive.google.com/file/d/10hIaUv8avD57cbUYJ5MHwbv6KV5N-_x3/view?usp=sharing',
+    paper: 'Kalambur_04-2022.pdf',
   },
   {
     name: `[OBZOOR] Худы "з Малевічам" у трэндзе? Для чаго дызайнеры выкарыстоўваюць нацыянальныя традыцыі і мастацтва ў сваіх працах`,

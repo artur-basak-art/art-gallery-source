@@ -97,16 +97,29 @@ export default function NewsPage() {
               sx={{ width: "100%", maxWidth: 500, bgcolor: "background.paper" }}
             >
               {data.map((item) => (
-                <Link href={item.url} target="_blank">
-                  <ListItem key={item.url} sx={{ paddingLeft: "0" }}>
-                    <ListItemAvatar>
-                      <Avatar>
-                        <NewspaperIcon />
-                      </Avatar>
-                    </ListItemAvatar>
-                    <ListItemText primary={item.name} secondary={item.date} />
-                  </ListItem>
-                </Link>
+                <>
+                  <Link href={item.url} target="_blank">
+                    <ListItem key={item.url} sx={{ paddingLeft: "0" }}>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <NewspaperIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary={item.name} secondary={item.date} />
+                    </ListItem>
+                  </Link>
+                  {item.paper && (
+                    <Link
+                      sx={{
+                        display: "inline",
+                      }}
+                      href={`/files/${item.paper}`}
+                      target="_blank"
+                    >
+                      [НА ПАПЕРЫ]
+                    </Link>
+                  )}
+                </>
               ))}
             </List>
           </Container>
