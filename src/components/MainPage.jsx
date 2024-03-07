@@ -17,8 +17,6 @@ import Footer from "./Footer";
 export default function MainPage() {
   const [isAuthorPhotoLoading, setAuthorPhotoLoading] = useState(true);
   const [isBookPhotoLoading, setBookPhotoLoading] = useState(true);
-  const [isExhibitionPhotoLoading, setExhibitionkPhotoLoading] = useState(true);
-  const [isMuseumPhotoLoading, setMuseumPhotoLoading] = useState(true);
   const handleAuthorPhotoLoad = useCallback(
     () => setAuthorPhotoLoading(false),
     [setAuthorPhotoLoading]
@@ -26,16 +24,6 @@ export default function MainPage() {
   const handleBookPhotoLoad = useCallback(
     () => setBookPhotoLoading(false),
     [setBookPhotoLoading]
-  );
-
-  const handleExhibitionPhotoLoad = useCallback(
-    () => setExhibitionkPhotoLoading(false),
-    [setExhibitionkPhotoLoading]
-  );
-
-  const handleMuseumPhotoLoad = useCallback(
-    () => setMuseumPhotoLoading(false),
-    [setMuseumPhotoLoading]
   );
 
   return (
@@ -300,60 +288,6 @@ export default function MainPage() {
               sx={{
                 fontSize: {
                   xs: "24px",
-                  sm: "24px",
-                },
-              }}
-            >
-              Мастацкая выстава ілюстрацый &laquo;Беларускія&nbsp;Нячысцікі:
-              Русалкі&raquo; у межах фестывалю міфалогіі
-              &laquo;Шлях&nbsp;Цмока&raquo;
-            </Typography>
-            {isExhibitionPhotoLoading && (
-              <Skeleton
-                sx={{
-                  margin: "16px 0 32px",
-                  width: { xs: "calc(100vw - 32px)", sm: "550px" },
-                }}
-                variant="rectangular"
-                height={550}
-                animation="wave"
-              />
-            )}
-            <Box
-              component="img"
-              src="/assets/exhibition.png"
-              alt=""
-              onLoad={handleExhibitionPhotoLoad}
-              sx={{
-                width: "calc(100vw - 32px)",
-                height: "auto",
-                margin: "16px 0 32px",
-                display: isExhibitionPhotoLoading ? "none" : "inherit",
-              }}
-            />
-            <Divider
-              sx={{
-                width: "100%",
-                margin: "32px 0",
-                display: { xs: "block", sm: "none" },
-              }}
-            />
-            <Divider
-              sx={{
-                width: "100%",
-                margin: "32px 0",
-                display: { xs: "none", sm: "block" },
-              }}
-            />
-            <Typography
-              component="h2"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
-              sx={{
-                fontSize: {
-                  xs: "24px",
                   sm: "32px",
                 },
               }}
@@ -366,30 +300,24 @@ export default function MainPage() {
               color="text.secondary"
               paragraph
             >
-              У выдавецтве &laquo;Тэхналогія&raquo; выйшаў{" "}
+              Выйшаў мой першы артбук (
               <MUILink
                 href="https://www.livelib.ru/book/1007675719-belaruskiya-nyachystsiki-lyasnyya-artur-basak"
                 target="_blank"
               >
-                мой першы артбук
-              </MUILink>{" "}
-              з ілюстрацыямі &laquo;нячысцікаў&raquo; і неверагоднымі тэкстамі
-              да іх беларускай пісьменніцы{" "}
-              <MUILink
-                href="https://www.livelib.ru/author/1093131-alina-dlatoskaya"
-                target="_blank"
-              >
-                Аліны Длатоўскай
+                LiveLib
               </MUILink>
-              . Шукайце кнігу ў беларускіх кнігарнях.
-              <br />
-              Лічбавую PDF-версію кнігі можна зпампаваць{" "}
+              ,{" "}
               <MUILink
-                href="/files/Belarusian-monsters-Part-1-forest.pdf"
+                href="https://www.goodreads.com/book/show/144716398?ac=1&from_search=true&qid=afnJaQLI11&rank=1"
                 target="_blank"
               >
-                тут бясплатна.{" "}
-              </MUILink>{" "}
+                GoodReads
+              </MUILink>
+              ) з ілюстрацыямі &laquo;нячысцікаў&raquo; і неверагоднымі тэкстамі
+              да іх беларускай пісьменніцы Аліны Длатоўскай. Шукайце кнігу ў
+              беларускіх кнігарнях.
+              <br />
             </Typography>
             {isBookPhotoLoading && (
               <Skeleton
@@ -412,46 +340,6 @@ export default function MainPage() {
                 height: { xs: "auto", sm: "550px" },
                 margin: "16px 0 32px",
                 display: isBookPhotoLoading ? "none" : "inherit",
-              }}
-            />
-            <Divider sx={{ width: "100%", margin: "32px 0" }} />
-            <Typography
-              component="h2"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
-              sx={{
-                fontSize: {
-                  xs: "24px",
-                  sm: "24px",
-                },
-              }}
-            >
-              &laquo;Беларускія&nbsp;Нячысцікі&raquo; у пастаяннай экспазіцыі
-              Музея Міфаў
-            </Typography>
-            {isMuseumPhotoLoading && (
-              <Skeleton
-                sx={{
-                  margin: "16px 0 32px",
-                  width: { xs: "calc(100vw - 32px)", sm: "550px" },
-                }}
-                variant="rectangular"
-                height={550}
-                animation="wave"
-              />
-            )}
-            <Box
-              component="img"
-              src="/assets/museum.png"
-              alt=""
-              onLoad={handleMuseumPhotoLoad}
-              sx={{
-                width: "calc(100vw - 32px)",
-                height: "auto",
-                margin: "16px 0 32px",
-                display: isMuseumPhotoLoading ? "none" : "inherit",
               }}
             />
             <Divider

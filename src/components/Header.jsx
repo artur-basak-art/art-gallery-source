@@ -21,6 +21,10 @@ const navItems = [
     to: "/",
   },
   {
+    name: "ВЫСТАВЫ",
+    to: "/exhibitions",
+  },
+  {
     name: "НЯЧЫСЦІКІ",
     to: "/monsters",
   },

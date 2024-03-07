@@ -13,6 +13,7 @@ import GhostsPage from "./components/GhostsPage";
 import GodsPage from "./components/GodsPage";
 import ErrorPage from "./components/ErrorPage";
 import NewsPage from "./components/NewsPage";
+import ExhibitionsPage from "./components/ExhibitionsPage";
 import Details from "./components/Details";
 import ScrollTop from "./components/ScrollTop";
 
@@ -82,6 +83,11 @@ const router = createHashRouter([
     path: "/news",
     element: <NewsPage />,
     loader: loadNews,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/exhibitions",
+    element: <ExhibitionsPage />,
     errorElement: <ErrorPage />,
   },
 ]);
