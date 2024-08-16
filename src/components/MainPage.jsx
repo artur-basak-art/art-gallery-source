@@ -292,6 +292,76 @@ export default function MainPage() {
                 },
               }}
             >
+              Новыя выданні &laquo;Беларускіх&nbsp;нячысцікаў&raquo; у
+              выдавецтве &ldquo;Папуры&ldquo;!
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "16px",
+                flexDirection: { xs: "column", sm: "row" },
+              }}
+            >
+              <a
+                target="_blank"
+                href="https://papury.by/site/books/17189/48563"
+                rel="noreferrer"
+              >
+                <Box
+                  component="img"
+                  src="/assets/book-01.png"
+                  alt=""
+                  sx={{
+                    width: "182px",
+                    height: "243px",
+                    transition: "transform 0.2s",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                    },
+                  }}
+                />
+              </a>
+              <a
+                target="_blank"
+                href="https://papury.by/site/books/17187/22410/41679/57165"
+                rel="noreferrer"
+              >
+                <Box
+                  component="img"
+                  src="/assets/book-02.png"
+                  alt=""
+                  sx={{
+                    width: "182px",
+                    height: "243px",
+                    transition: "transform 0.2s",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                    },
+                  }}
+                />
+              </a>
+            </Box>
+            <Divider
+              sx={{
+                width: "100%",
+                margin: "32px 0",
+                display: { xs: "none", sm: "block" },
+              }}
+            />
+            <Typography
+              component="h2"
+              variant="h2"
+              align="center"
+              color="text.primary"
+              gutterBottom
+              sx={{
+                fontSize: {
+                  xs: "24px",
+                  sm: "32px",
+                },
+              }}
+            >
               Першая частка &laquo;Беларускіх&nbsp;нячысцікаў&raquo; выдана!
             </Typography>
             <Typography
