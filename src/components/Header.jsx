@@ -49,7 +49,7 @@ function SocialMedia({ color }) {
         <IconButton
           variant="outlined"
           component="a"
-          href="https://www.instagram.com/belarusian_monsters"
+          href="https://www.instagram.com/belarusian_bogeyfolk"
           target="_blank"
         >
           <InstagramIcon htmlColor={color} />

@@ -32,7 +32,7 @@ export default function MainPage() {
       <Helmet>
         <meta
           name="description"
-          content="Артур Басак, мастак-самавук, ілюстратар, праграміст і UI інжынер, які натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў, міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце. Яго малюнкі жыўцом можна пабачыць у Музеі Міфаў Бярэзінскага Запаведніка, Лідскім Замку, а таксама онлайн у Instagram акаунце @belarusian_monsters"
+          content="Артур Басак, мастак-самавук, ілюстратар, праграміст і UI інжынер, які натхняецца беларускiм фальклорам ды народнай дэманалогіяй i стварае вобразы вядомых нячысцікаў з паданняў, міфаў, беларускіх легенд і казак. Працуе ў лічбавым фармаце. Яго малюнкі жыўцом можна пабачыць у Музеі Міфаў Бярэзінскага Запаведніка, Лідскім Замку, а таксама онлайн у Instagram акаунце @belarusian_bogeyfolk"
         />
         <meta property="og:locale" content="be_BY" />
         <meta property="og:title" content="Артур Басак" />
@@ -295,6 +295,31 @@ export default function MainPage() {
               Новыя выданні &laquo;Беларускіх&nbsp;нячысцікаў&raquo; у
               выдавецтве &ldquo;Папуры&ldquo;!
             </Typography>
+            <Typography
+              variant="h7"
+              align="center"
+              color="text.secondary"
+              paragraph
+            >
+              А менавіта гэта перавыданне першай кнігі “Беларускія нячысцікі:
+              Лясныя” (
+              <MUILink
+                href="https://www.goodreads.com/book/show/217460582"
+                target="_blank"
+              >
+                GoodReads
+              </MUILink>
+              ) у новай вокладцы і доўгачаканая новая другая кніга “Беларускія
+              нячысцікі: водныя і балотныя” (
+              <MUILink
+                href="https://www.goodreads.com/book/show/217460712"
+                target="_blank"
+              >
+                GoodReads
+              </MUILink>
+              ).
+              <br />
+            </Typography>
             <Box
               sx={{
                 display: "flex",
@@ -313,9 +338,11 @@ export default function MainPage() {
                   src="/assets/book-01.png"
                   alt=""
                   sx={{
-                    width: "182px",
-                    height: "243px",
+                    width: "252px",
+                    height: "359px",
                     transition: "transform 0.2s",
+                    filter:
+                      "drop-shadow(2px 4px 6px black) saturate(1.1) contrast(0.9)",
                     "&:hover": {
                       transform: "scale(1.1)",
                     },
@@ -332,9 +359,11 @@ export default function MainPage() {
                   src="/assets/book-02.png"
                   alt=""
                   sx={{
-                    width: "182px",
-                    height: "243px",
+                    width: "252px",
+                    height: "359px",
                     transition: "transform 0.2s",
+                    filter:
+                      "drop-shadow(2px 4px 6px black) saturate(1.1) contrast(0.9)",
                     "&:hover": {
                       transform: "scale(1.1)",
                     },
@@ -516,10 +545,10 @@ export default function MainPage() {
                   Бярэзінскага Запаведніка, Лідскім Замку, а таксама онлайн у
                   Instagram акаунце{" "}
                   <MUILink
-                    href="https://www.instagram.com/belarusian_monsters"
+                    href="https://www.instagram.com/belarusian_bogeyfolk"
                     target="_blank"
                   >
-                    @belarusian_monsters
+                    @belarusian_bogeyfolk
                   </MUILink>{" "}
                   і канешне ж тут на гэтым сайце.
                 </Typography>

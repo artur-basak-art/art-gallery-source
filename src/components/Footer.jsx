@@ -15,7 +15,7 @@ import EmailIcon from "@mui/icons-material/Email";
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
-      All images copyright © Artur Basak (@belarusian_monsters). All rights reserved.
+      All images copyright © Artur Basak (@belarusian_bogeyfolk). All rights reserved.
     </Typography>
   );
 }
@@ -38,7 +38,7 @@ export default function Footer() {
           <IconButton
             variant="outlined"
             component="a"
-            href="https://www.instagram.com/belarusian_monsters"
+            href="https://www.instagram.com/belarusian_bogeyfolk"
             target="_blank"
           >
             <InstagramIcon />

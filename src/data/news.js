@@ -1,5 +1,10 @@
 const news = [
   {
+    name: `[Белліт] Выйшлі шыкоўныя выданні пра беларускіх нячысцікаў`,
+    date: 'Жнівень 9, 2024',
+    url: 'https://bellit.info/news/vyjshli-shykounyja-vydanni-pra-bjelaruskikh-njachyscikau.html',
+  },
+  {
     name: `"Лепельскі Край": «ШЛЯХ ЦМОКА» ПО ЗАГАДОЧНЫМ ТРОПАМ ЗАПОВЕДНИКА`,
     date: 'Жнівень 22, 2023',
     url: 'https://lepel-kraj.by/novosti/turizm/shlyah-cmoka-po-zagadochnym-tropam-zapovednika-22-08-2023',
@@ -54,11 +59,11 @@ const news = [
     date: 'Лістапад , 2021',
     url: 'https://obzoor.by/shopping/hudi-s-malevichem-v-trende-zachem-dizajnery-ispolzujut-nacionalnye-tradicii-i-iskusstvo-v-svoih-rabotah/',
   },
-  {
-    name: `Русалки без хвоста, ухающий Шеша и Возила с конской головой: какими были белорусские боги и духи`,
-    date: 'Лістапад 27 , 2021',
-    url: 'https://smartpress.by/idea/istoriya/15163/?sphrase_id=4736081',
-  },
+  // {
+  //   name: `Русалки без хвоста, ухающий Шеша и Возила с конской головой: какими были белорусские боги и духи`,
+  //   date: 'Лістапад 27 , 2021',
+  //   url: 'https://smartpress.by/idea/istoriya/15163/?sphrase_id=4736081',
+  // },
   {
     name: `Адукар: Сем пачварыкаў з беларускай міфалогіі, якія могуць напалохаць больш за прывідаў`,
     date: 'Кастрычнік 29, 2021',

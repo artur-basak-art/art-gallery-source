@@ -1,25 +1,25 @@
-import React, { useCallback } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React from "react";
+// import { useLocation, useNavigate } from "react-router-dom";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import Button from "@mui/material/Button";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+// import CardActions from "@mui/material/CardActions";
+// import Button from "@mui/material/Button";
+// import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function PictureCard(props) {
   const { pic } = props;
-  const { pathname } = useLocation();
-  const navigate = useNavigate();
-  const handleCardClick = useCallback(
-    () =>
-      navigate(`${pathname}/${pic.id}`, {
-        state: { prevPath: pathname },
-        preventScrollReset: true,
-      }),
-    [navigate, pathname, pic]
-  );
+  // const { pathname } = useLocation();
+  // const navigate = useNavigate();
+  // const handleCardClick = useCallback(
+  //   () =>
+  //     navigate(`${pathname}/${pic.id}`, {
+  //       state: { prevPath: pathname },
+  //       preventScrollReset: true,
+  //     }),
+  //   [navigate, pathname, pic]
+  // );
 
   const imageStyle = {
     height: {
@@ -34,25 +34,25 @@ export default function PictureCard(props) {
 
   return (
     <Card
-      onClick={handleCardClick}
+      // onClick={handleCardClick}
       sx={{
         border: "1px solid transparent",
-        "&:hover": {
-          border: {
-            xs: "1px solid transparent",
-            sm: "1px solid white",
-          },
-        },
+        // "&:hover": {
+        //   border: {
+        //     xs: "1px solid transparent",
+        //     sm: "1px solid white",
+        //   },
+        // },
         display: "flex",
         flexDirection: "column",
         height: "100%",
-        justifyContent: 'space-between',
+        justifyContent: "space-between",
         alignItems: {
           xs: "center",
           sm: "flex-start",
         },
         boxShadow: "none",
-        cursor: "pointer",
+        // cursor: "pointer",
       }}
     >
       <CardMedia
@@ -80,23 +80,23 @@ export default function PictureCard(props) {
         >
           {pic.name}
         </Typography>
-        <Typography
-          component="p"
-          sx={{
-            display: "-webkit-box",
-            "-webkit-box-orient": "vertical",
-            "-webkit-line-clamp": "2",
-            overflow: "hidden",
-          }}
-        >
-          <span dangerouslySetInnerHTML={{ __html: pic.description }} />
-        </Typography>
+        {/* <Typography */}
+        {/*  component="p" */}
+        {/*  sx={{ */}
+        {/*    display: "-webkit-box", */}
+        {/*    "-webkit-box-orient": "vertical", */}
+        {/*    "-webkit-line-clamp": "2", */}
+        {/*    overflow: "hidden", */}
+        {/*  }} */}
+        {/* > */}
+        {/*  <span dangerouslySetInnerHTML={{ __html: pic.description }} /> */}
+        {/* </Typography> */}
       </CardContent>
-      <CardActions>
-        <Button size="small" startIcon={<ArrowForwardIcon />}>
-          Чытаць падрабязней
-        </Button>
-      </CardActions>
+      {/* <CardActions> */}
+      {/*  <Button size="small" startIcon={<ArrowForwardIcon />}> */}
+      {/*    Чытаць падрабязней */}
+      {/*  </Button> */}
+      {/* </CardActions> */}
     </Card>
   );
 }

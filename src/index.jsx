@@ -14,7 +14,7 @@ import GodsPage from "./components/GodsPage";
 import ErrorPage from "./components/ErrorPage";
 import NewsPage from "./components/NewsPage";
 import ExhibitionsPage from "./components/ExhibitionsPage";
-import Details from "./components/Details";
+// import Details from "./components/Details";
 import ScrollTop from "./components/ScrollTop";
 
 import loadNews from "./data/news";
@@ -35,48 +35,48 @@ const router = createHashRouter([
     path: "/gods",
     element: <GodsPage />,
     loader: loadGods,
-    children: [
-      {
-        path: "/gods/:characterId",
-        element: <Details />,
-      },
-    ],
+    // children: [
+    //   {
+    //     path: "/gods/:characterId",
+    //     element: <Details />,
+    //   },
+    // ],
     errorElement: <ErrorPage />,
   },
   {
     path: "/monsters",
     element: <MonstersPage />,
     loader: loadMonsters,
-    children: [
-      {
-        path: "/monsters/:characterId",
-        element: <Details />,
-      },
-    ],
+    // children: [
+    //   {
+    //     path: "/monsters/:characterId",
+    //     element: <Details />,
+    //   },
+    // ],
     errorElement: <ErrorPage />,
   },
   {
     path: "/ghosts",
     element: <GhostsPage />,
     loader: loadGhosts,
-    children: [
-      {
-        path: "/ghosts/:characterId",
-        element: <Details />,
-      },
-    ],
+    // children: [
+    //   {
+    //     path: "/ghosts/:characterId",
+    //     element: <Details />,
+    //   },
+    // ],
     errorElement: <ErrorPage />,
   },
   {
     path: "/were-monsters",
     element: <WereMonstersPage />,
     loader: loadWereMonsters,
-    children: [
-      {
-        path: "/were-monsters/:characterId",
-        element: <Details />,
-      },
-    ],
+    // children: [
+    //   {
+    //     path: "/were-monsters/:characterId",
+    //     element: <Details />,
+    //   },
+    // ],
     errorElement: <ErrorPage />,
   },
   {

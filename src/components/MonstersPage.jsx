@@ -30,7 +30,7 @@ export default function MonstersPage() {
         categories={categories}
         title={title}
         description={description}
-        withImage="/assets/jan-kliks-lashkevich.png"
+        // withImage="/assets/jan-kliks-lashkevich.png"
       />
       <Outlet />
     </>
